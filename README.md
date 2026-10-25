@@ -1,66 +1,131 @@
-# IP-SAKTI: Traditional Knowledge Prior Art Intelligence Platform
+# IP-SAKTI
 
-IP-SAKTI bridges ancient codified Ayurvedic literature (**Charaka Samhita** via NIIMH e-Samhita) with modern international intellectual property examination (**USPTO, EPO, WIPO**) to validate prior art and defend against biopiracy under **Section 3(p) of the Indian Patents Act, 1970**.
+A retrieval pipeline that answers traditional-knowledge (Ayurveda) queries
+grounded in classical texts, and cross-references them against patent
+filings to flag potential overlap — built as a personal project based on
+the Smart India Hackathon problem statement SIH26045 (IP-SAKTI Sahayak,
+Ministry of AYUSH).
 
----
+**Status: working local prototype / MVP backend.** This is not a hosted or
+deployed product — everything currently runs locally via Docker. See
+[Known Limitations](#known-limitations) before using any output as a
+confirmed finding.
 
-## 🎨 Frontend & Stitch Screens
+## What it does
 
-The user interface implements the **Vedic Jurisprudence** design system (authoritative legal-academic atmosphere rooted in historical botany and archival precision).
+1. Ingests and cleans verses + commentary from NIIMH's e-Samhita (Charaka
+   Samhita digitized text)
+2. Ingests India-jurisdiction, plant-based medicinal patents (CPC `A61K36`)
+   from the Google Patents public BigQuery dataset
+3. Embeds both corpora with a multilingual sentence-transformer and stores
+   them in separate Qdrant collections
+4. Given a query, searches traditional-knowledge text with an honest
+   **abstention** when evidence is weak, and independently checks for
+   potential patent overlap — the two never gate each other
+5. Exposes this via a FastAPI endpoint and a minimal web frontend
 
-### Saved Stitch Project Assets (`frontend/stitch-screens/`):
-- **Screen 1 (Query & Overview)**: `frontend/stitch-screens/screen_1_query.html` & `screen_1_query.png`
-- **Screen 2 (Honest Abstention)**: `frontend/stitch-screens/screen_2_abstention.html` & `screen_2_abstention.png`
-- **Screen 3 (Query Processing)**: `frontend/stitch-screens/screen_3_processing.html` & `screen_3_processing.png`
-- **Screen 4 (Evidence & Overlap Results)**: `frontend/stitch-screens/screen_4_results.html` & `screen_4_results.png`
+## Architecture
 
-### Production Integrated Application:
-- **`frontend/index.html`**: A fully functional Single-Page Application (SPA) integrating all 4 screen states, dynamic query processing, honest abstention handling, and live API synchronization.
-
----
-
-## 🚀 Running Backend & Frontend in Sync
-
-### Step 1: Start Databases (Qdrant & PostgreSQL)
-Ensure Docker Desktop is running, then execute:
-```bash
-docker compose up -d
 ```
-- **Qdrant Vector DB**: `http://localhost:6333/dashboard`
-- **PostgreSQL**: Port `5432` (`ipsakti` db)
-
-### Step 2: Start the FastAPI Backend
-Using the local virtual environment:
-```bash
-# Windows PowerShell
-.\.venv\Scripts\uvicorn api.main:app --reload --port 8000
+NIIMH HTML pages          Google Patents (BigQuery)
+       │                          │
+   adapter/parser            SQL query (CPC + country filter)
+       │                          │
+  dedup (content-hash)      JSON export
+       │                          │
+  verse+commentary chunking       │
+       │                          │
+       ▼                          ▼
+  sentence-transformers embeddings (same model, both sources)
+       │                          │
+       ▼                          ▼
+  Qdrant: ip_sakti_niimh    Qdrant: ip_sakti_patents
+                │                 │
+                └────────┬────────┘
+                         ▼
+                  FastAPI /query endpoint
+                   (independent search,
+                    honest NIIMH abstention)
+                         │
+                         ▼
+                  Static HTML/JS frontend
 ```
-- **Interactive Swagger Docs**: `http://localhost:8000/docs`
-- **Liveness Health Check**: `http://localhost:8000/health`
-- **Semantic Retrieval**: `POST http://localhost:8000/query` with body `{"query": "your search"}`
 
-### Step 3: Launch the Frontend
-Open `frontend/index.html` directly in your browser or run a simple local web server:
-```bash
-# Serve frontend on port 3000
-python -m http.server 3000 --directory frontend
+## Tech stack
+
+- **Ingestion:** Python, BeautifulSoup (HTML parsing), Google BigQuery (patents)
+- **Embeddings:** `sentence-transformers` — `paraphrase-multilingual-MiniLM-L12-v2`
+- **Vector store:** Qdrant (Docker)
+- **API:** FastAPI + Uvicorn
+- **Frontend:** vanilla HTML/CSS/JS (no build step)
+- *(Postgres is provisioned in `docker-compose.yml` for future structured/relational needs — not yet wired into the pipeline.)*
+
+## Setup
+
+### Prerequisites
+- Python 3.10+
+- Docker Desktop running
+
+### Install
+```powershell
+pip install -r requirements.txt
+docker-compose up -d
 ```
-Visit: **`http://localhost:3000`**
 
----
+### Data pipeline (NIIMH)
+```powershell
+python test_niimh_candidates.py
+python ingestion\eda_agent\pipeline\validate_candidates.py data\processed\niimh_verses.jsonl
+python ingestion\eda_agent\pipeline\dedup_by_content.py
+python ingestion\eda_agent\pipeline\build_chunks.py
+python ingestion\eda_agent\pipeline\embed_and_upsert.py
+```
 
-## 🔄 Backend & Frontend Synchronization Details
+### Data pipeline (Patents)
+Patents are pulled manually via the BigQuery console (see `notes/` for the
+query used) and saved to `data/raw/patents/india_a61k36_patents.json`, then:
+```powershell
+python ingestion\eda_agent\pipeline\embed_patents.py
+```
 
-1. **Independent Dual Search**:
-   - The NIIMH Traditional Knowledge corpus (Sanskrit/Devanagari) and the Global Patent index (English) run independently.
-   - Patent leads are never suppressed if NIIMH search has lower confidence, and vice versa.
+### Run the API
+```powershell
+uvicorn api.main:app --reload --port 8000
+```
+Interactive docs at `http://localhost:8000/docs`.
 
-2. **Honest Abstention Mechanism**:
-   - Threshold is calibrated to `0.30` cosine similarity.
-   - If top score < `0.30`, `niimh.abstained` is `true`. The frontend displays the **Honest Abstention** view while still displaying potential patent overlap leads.
+### Run the frontend
+Open `frontend\index.html` directly in a browser (no server needed).
 
-3. **Live Health Monitoring**:
-   - The frontend continuously pings `GET /health` to display live API connection status in the sidebar.
+## Known limitations
 
-4. **Evidence Dossier Export**:
-   - Generates a timestamped JSON compliance audit file directly from search results.
+This section is here on purpose — treat it as part of the project, not a
+footnote.
+
+- **Cross-lingual retrieval gap.** The embedding model matches English
+  queries against Sanskrit/IAST-transliterated text noticeably more weakly
+  than same-language matches. A relevant English query can score well
+  below a relevant Sanskrit-term query for the same concept.
+- **Generic-attractor chunks.** Some short, term-dense NIIMH chunks
+  surface as top matches for multiple unrelated queries — a sign of
+  partial lexical rather than deep semantic matching. Treat any single
+  NIIMH match with some skepticism until this is addressed.
+- **Small patent sample (82 records).** Strict filtering (India
+  jurisdiction + CPC `A61K36` + English abstract present) leaves a small
+  usable set — most India-origin patents in this dataset lack an English
+  abstract at all. Scope was deliberately kept to India-only for build
+  speed; a global pull would better match the actual TK-overlap use case
+  this project is aimed at, at higher BigQuery cost.
+- **Verse–commentary join is incomplete.** Only ~12.6% of NIIMH chunks
+  are verse+commentary pairs; the rest are standalone verse or commentary
+  chunks, because the join only matches exact `unit_id` — commentary
+  spanning a verse range isn't linked. Documented, not yet fixed.
+- **No re-ranking.** Retrieval is raw cosine similarity only — there's no
+  second-pass re-ranking step, which would likely improve precision on
+  top results.
+- **Not deployed.** Local Docker only; no auth, no multi-tenancy, no
+  hosting.
+
+## License
+
+MIT — see `LICENSE`.
