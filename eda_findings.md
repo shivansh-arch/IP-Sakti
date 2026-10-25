@@ -1,0 +1,1 @@
+NIIMH e-Samhita provides Sanskrit verse text + Sanskrit commentary (bhashya) only. No English translation layer. English must come from a separate source and be aligned by verse number.
