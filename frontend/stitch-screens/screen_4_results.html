@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><title>IP-SAKTI | Traditional Knowledge Prior Art Intelligence</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-variant": "#d9e3f6",
+          "surface-container-highest": "#d9e3f6",
+          "primary": "#07290c",
+          "on-surface-variant": "#424840",
+          "secondary-fixed-dim": "#ffb59e",
+          "outline": "#737970",
+          "on-primary-fixed": "#012106",
+          "tertiary-fixed-dim": "#a1d494",
+          "surface-container-lowest": "#ffffff",
+          "tertiary-fixed": "#bcf0ae",
+          "on-secondary-container": "#711d00",
+          "on-tertiary": "#ffffff",
+          "error-container": "#ffdad6",
+          "background": "#f8f9ff",
+          "primary-container": "#1e3f20",
+          "surface": "#f8f9ff",
+          "surface-container-high": "#dee9fc",
+          "primary-fixed": "#c5edc1",
+          "inverse-primary": "#aad1a6",
+          "on-primary-container": "#86ab83",
+          "inverse-surface": "#27313f",
+          "on-secondary": "#ffffff",
+          "on-primary-fixed-variant": "#2d4e2e",
+          "on-error": "#ffffff",
+          "tertiary": "#002a02",
+          "surface-tint": "#446744",
+          "on-tertiary-container": "#7dae71",
+          "outline-variant": "#c2c8be",
+          "secondary": "#a13f1f",
+          "on-tertiary-fixed": "#002201",
+          "on-background": "#121c2a",
+          "secondary-container": "#fc845e",
+          "on-error-container": "#93000a",
+          "secondary-fixed": "#ffdbd0",
+          "tertiary-container": "#144111",
+          "surface-container": "#e6eeff",
+          "inverse-on-surface": "#eaf1ff",
+          "error": "#ba1a1a",
+          "surface-bright": "#f8f9ff",
+          "on-primary": "#ffffff",
+          "on-tertiary-fixed-variant": "#23501e",
+          "on-secondary-fixed": "#3a0a00",
+          "primary-fixed-dim": "#aad1a6",
+          "surface-dim": "#d0dbed",
+          "surface-container-low": "#eff4ff",
+          "on-secondary-fixed-variant": "#812809",
+          "on-surface": "#121c2a"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-md": "1rem",
+          "space-xs": "0.25rem",
+          "gutter": "1.25rem",
+          "margin-mobile": "1rem",
+          "space-sm": "0.5rem",
+          "space-lg": "1.5rem",
+          "margin": "2rem",
+          "gutter-mobile": "0.75rem",
+          "space-xl": "2.5rem"
+        },
+        "fontFamily": {
+          "body-lg": ["Plus Jakarta Sans"],
+          "headline-md": ["Noto Serif"],
+          "label-md": ["Plus Jakarta Sans"],
+          "display": ["Noto Serif"],
+          "headline-sm": ["Noto Serif"],
+          "label-lg": ["Plus Jakarta Sans"],
+          "body-md": ["Plus Jakarta Sans"],
+          "citation": ["Noto Serif"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "label-sm": ["Plus Jakarta Sans"],
+          "headline-lg-mobile": ["Noto Serif"],
+          "display-mobile": ["Noto Serif"],
+          "headline-lg": ["Noto Serif"]
+        },
+        "fontSize": {
+          "body-lg": ["1.125rem", {"lineHeight": "1.75rem", "fontWeight": "400"}],
+          "headline-md": ["1.5rem", {"lineHeight": "2rem", "fontWeight": "600"}],
+          "label-md": ["0.75rem", {"lineHeight": "1rem", "letterSpacing": "0.025em", "fontWeight": "600"}],
+          "display": ["2.25rem", {"lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+          "headline-sm": ["1.25rem", {"lineHeight": "1.75rem", "fontWeight": "600"}],
+          "label-lg": ["0.875rem", {"lineHeight": "1.25rem", "letterSpacing": "0.01em", "fontWeight": "600"}],
+          "body-md": ["0.9375rem", {"lineHeight": "1.5rem", "fontWeight": "400"}],
+          "citation": ["0.875rem", {"lineHeight": "1.5rem", "letterSpacing": "0.01em", "fontWeight": "400"}],
+          "body-sm": ["0.8125rem", {"lineHeight": "1.25rem", "fontWeight": "400"}],
+          "label-sm": ["0.6875rem", {"lineHeight": "0.875rem", "letterSpacing": "0.05em", "fontWeight": "600"}],
+          "headline-lg-mobile": ["1.5rem", {"lineHeight": "2rem", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "display-mobile": ["1.75rem", {"lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "headline-lg": ["1.875rem", {"lineHeight": "2.375rem", "letterSpacing": "-0.015em", "fontWeight": "600"}]
+        }
+      }
+    }
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low border-r border-outline-variant/30 z-50 flex flex-col justify-between py-space-md"><div class="flex flex-col"><div class="px-space-md pb-space-lg border-b border-outline-variant/20 flex items-center gap-space-sm"><img alt="IP-SAKTI Brand Mark" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XH7xbYSTBxI_Z19TBsvUbF8iuwAg66qi9bc1EyXN5vVQLNqOXRgH8lq0_JSt_EVePDjwVTR6xXSYB72trBJkJMIXH9gWwsUw9h93eJriL8sP2oTpjGt7WCpOo-10iTlBZjjPymzyd3ZWCHkXvptJYmJnB4_8d8fTS_VBLpHc4nTZl1bCy4zmQwJZj1J1z2yiSWvaN_rV2jdPQkZWreqFN2BH8rAqAB4_j-NWcXQTk2Ozdds0QAWJTW8_I"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">IP-SAKTI</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Examiner Portal</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-1.5 bg-surface-container rounded flex items-center justify-between text-on-surface font-label-sm text-label-sm"><span class="text-on-surface-variant font-medium">TKDL Indexed</span><span class="font-semibold text-primary">385,420 Arts</span></div></div><nav class="flex flex-col gap-1 px-space-sm mt-space-sm" data-active-classes="bg-primary-container text-on-primary font-bold"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="overview" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Overview</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2.5 rounded transition-colors bg-primary-container text-on-primary font-bold" data-path="prior-art-search" href="#"><span class="material-symbols-outlined text-[18px]">search</span><span>Prior Art Search</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="dossier-comparison" href="#"><span class="material-symbols-outlined text-[18px]">compare_arrows</span><span>Dossier Examination</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="statutory-corpus" href="#"><span class="material-symbols-outlined text-[18px]">library_books</span><span>Statutory Corpus</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="documentation" href="#"><span class="material-symbols-outlined text-[18px]">description</span><span>Codex Protocol</span></a></nav></div><div class="px-space-md pt-space-sm border-t border-outline-variant/20 flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs text-label-sm font-label-sm text-on-surface-variant"><span class="material-symbols-outlined text-[14px] text-tertiary">shield</span><span>Statutory S. 3(p) Filter</span></div><span class="text-[11px] text-outline leading-tight">Govt. of India • CSIR / TKDL Directorate</span></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(7,41,12,0.05)] border-b border-outline-variant/30 z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-sm"><div class="inline-flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-high rounded text-on-surface font-label-md text-label-md"><span class="material-symbols-outlined text-primary text-[15px]">menu_book</span><span>Charaka Samhita Ed. VII • USPTO / EPO / WIPO TKDL Cross-Index</span></div><div class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-primary-fixed/50 text-on-primary-fixed-variant rounded font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span><span>Corpus Sync: Active</span></div></div><div class="flex items-center gap-space-sm"><a class="inline-flex items-center gap-1 px-space-sm py-1.5 text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors" data-path="documentation" href="#"><span class="material-symbols-outlined text-[18px]">library_books</span><span>Docs</span></a><button class="inline-flex items-center gap-1.5 px-space-md py-1.5 bg-primary-container text-on-primary rounded text-label-md font-label-md hover:bg-primary transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">file_download</span><span>Export Report</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-[calc(100vh-140px)] w-full px-gutter"><div class="flex flex-col w-full pb-space-xl">
+<!-- Query Bar & Context Strip -->
+<section class="w-full bg-surface-container-low rounded-lg p-space-md shadow-sm mb-space-lg flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-4xl">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-primary-container text-on-primary rounded font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[13px]">verified</span> Active Dossier Search
+        </span>
+<span class="font-label-md text-label-md text-on-surface-variant">Session Ref: #TKDL-CSIR-2024-8842-A</span>
+</div>
+<div class="flex items-baseline gap-space-xs flex-wrap">
+<span class="font-headline-sm text-headline-sm text-primary tracking-tight font-headline-sm">
+          “Turmeric (Haridra / Curcuma longa) for inflammatory joint pain and arthritis”
+        </span>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap pt-1">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-high text-primary rounded font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary">menu_book</span>
+          Corpus: Charaka Samhita (Varanasi Ed. 1949 recension)
+        </span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-high text-primary rounded font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">public</span>
+          Patents: Global (US / EP / WO)
+        </span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-highest text-on-surface rounded font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">science</span>
+          Target: Curcuminoids + Zingiberene Synergism
+        </span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 self-end xl:self-center">
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 bg-surface-container-highest text-on-surface hover:bg-surface-variant rounded font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Edit Query</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 bg-primary text-on-primary hover:bg-primary-container rounded font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Export Evidence Dossier (PDF)</span>
+</button>
+</div>
+</section>
+<!-- Metrics / Quick Telemetry Ribbon -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-space-md mb-space-lg">
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Classical Verses Surfaced</span>
+<span class="font-headline-md text-headline-md text-primary mt-0.5">14 Shlokas</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 Primary • 12 Secondary</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">auto_stories</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Patent Overlap Leads</span>
+<span class="font-headline-md text-headline-md text-secondary mt-0.5">8 Applications</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 High Conflict Risk (US/EP)</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Statutory Exclusion</span>
+<span class="font-headline-md text-headline-md text-primary mt-0.5">Section 3(p)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Indian Patents Act Invocation</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[20px]">gavel</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Semantic Match Level</span>
+<span class="font-headline-md text-headline-md text-primary mt-0.5">94.2%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ayush-IPC Ontology Bridge</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">schema</span>
+</div>
+</div>
+</section>
+<!-- Two-Column Primary Research Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg items-start">
+<!-- Column A: Classical Ayurvedic Knowledge -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-1 pb-1">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">menu_book</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Classical Ayurvedic Knowledge (Traditional Prior Art)</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Grounded in Charaka Samhita • Verified Sanskrit verses &amp; therapeutic citations from codified pharmacopeias
+        </p>
+</div>
+<!-- Card A1 -->
+<article class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md relative overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-primary-container"></div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs pl-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Canonical Source • Chikitsa Sthana</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Charaka Samhita, Adhyaya 12, Shloka 38-40</h3>
+</div>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-high text-primary rounded-full font-label-sm text-label-sm self-start sm:self-auto font-medium">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+            Confidence: High • 94% Semantic Concordance
+          </span>
+</div>
+<!-- Sanskrit Block -->
+<div class="bg-surface-container-low p-space-md rounded text-center relative overflow-hidden">
+<span class="absolute top-2 right-3 font-label-sm text-label-sm text-outline opacity-40 select-none">संहिता पाठ</span>
+<p class="font-citation text-body-lg text-primary leading-loose tracking-wide font-headline-md">
+            हरिद्रा नागरं मुस्तं त्रिफला देवदारु च |<br/>
+            क्वाथयित्वा पिबेदेष शोथशूलनिवारणः ||
+          </p>
+</div>
+<!-- Transliteration and English Meaning -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">IAST Transliteration</span>
+<p class="font-citation text-body-sm text-on-surface-variant italic">
+            haridrā nāgaraṃ mustaṃ triphalā devadāru ca | kvāthayitvā pibedeṣa śothaśūlanivāraṇaḥ ||
+          </p>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Authenticated Lexicon Translation</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            “Haridra (<span class="font-semibold text-primary">Curcuma longa</span>), Nagara (<span class="font-semibold text-primary">Zingiber officinale</span>), Musta, Triphala, and Devadaru, decocted together, alleviate inflammatory swelling (<span class="italic text-primary">Shotha</span>) and joint pain (<span class="italic text-primary">Shula</span>).”
+          </p>
+</div>
+<!-- Key Botanical Tags -->
+<div class="flex flex-wrap items-center gap-space-xs pt-1">
+<span class="px-space-sm py-0.5 bg-surface-container rounded text-on-surface font-label-sm text-label-sm">
+            Curcuma longa (Haridra)
+          </span>
+<span class="px-space-sm py-0.5 bg-surface-container rounded text-on-surface font-label-sm text-label-sm">
+            Zingiber officinale (Sunthi/Nagara)
+          </span>
+<span class="px-space-sm py-0.5 bg-surface-container-high rounded text-on-surface-variant font-label-sm text-label-sm">
+            Botanical Part: Rhizome (Kanda)
+          </span>
+<span class="px-space-sm py-0.5 bg-surface-container-high rounded text-on-surface-variant font-label-sm text-label-sm">
+            Formulation: Kwatha (Decoction)
+          </span>
+</div>
+<!-- Card Action Footer -->
+<div class="pt-space-sm flex items-center justify-between flex-wrap gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-1.5 px-space-sm py-1.5 bg-surface-container-high hover:bg-surface-variant rounded text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-primary">image</span>
+<span>View Original Folio (Manuscript Scan)</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-sm py-1.5 bg-surface-container-high hover:bg-surface-variant rounded text-on-surface font-label-sm text-label-sm transition-colors" onclick="navigator.clipboard?.writeText('CSIR-TKDL: CS-Chikitsa-12:38-40; Haridra Decoction for Sothasula'); this.innerText='Citation Copied!';" type="button">
+<span class="material-symbols-outlined text-[15px] text-tertiary">content_copy</span>
+<span>Copy Legal Citation (TKDL Format)</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Folio #CS-12-P384</span>
+</div>
+</article>
+<!-- Card A2 -->
+<article class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md relative overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-outline-variant"></div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs pl-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Canonical Source • Sutra Sthana</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Charaka Samhita, Sutra Sthana, Adhyaya 4, Shloka 11</h3>
+</div>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container text-on-surface rounded-full font-label-sm text-label-sm self-start sm:self-auto font-medium">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+            Confidence: Moderate • 82% Semantic Concordance
+          </span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded text-center relative overflow-hidden">
+<span class="absolute top-2 right-3 font-label-sm text-label-sm text-outline opacity-40 select-none">संहिता पाठ</span>
+<p class="font-citation text-body-lg text-primary leading-loose tracking-wide font-headline-md">
+            हरिद्रा कुष्ठघ्नीनां विषघ्नीनां च श्रेष्ठतमा भवति |
+          </p>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Authenticated Lexicon Translation</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            “Haridra is proclaimed supreme among remedies for chronic inflammatory skin eruptions, systemic toxic morbidities (<span class="italic text-primary">Vishaghna</span>), and deep tissue reactive syndromes.”
+          </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs pt-1">
+<span class="px-space-sm py-0.5 bg-surface-container rounded text-on-surface font-label-sm text-label-sm">
+            Curcuma longa L.
+          </span>
+<span class="px-space-sm py-0.5 bg-surface-container-high rounded text-on-surface-variant font-label-sm text-label-sm">
+            Sutra Sthana Ch. 4: Lekhaniya &amp; Kusthaghna Mahakashaya
+          </span>
+<span class="px-space-sm py-0.5 bg-surface-container-high rounded text-on-surface-variant font-label-sm text-label-sm">
+            Action: Shothahara (Anti-swelling)
+          </span>
+</div>
+<div class="pt-space-sm flex items-center justify-between flex-wrap gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-1.5 px-space-sm py-1.5 bg-surface-container-high hover:bg-surface-variant rounded text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-primary">image</span>
+<span>View Manuscript Scan</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-sm py-1.5 bg-surface-container-high hover:bg-surface-variant rounded text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-tertiary">content_copy</span>
+<span>Copy Legal Citation</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Folio #CS-04-P112</span>
+</div>
+</article>
+<!-- Classical Taxonomy Comparison Box -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">account_tree</span>
+<div class="flex flex-col gap-1">
+<span class="font-label-lg text-label-lg text-primary">Ayurvedic Pharmacopeia India (API) Cross-Index</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Cross-referenced with Bhavaprakasha Nighantu (Haritakyadi Varga, v. 196) and Ashtanga Hridaya (Sutra 15/5). Standard botanical marker: Curcumin ≥ 3.0% w/w by HPLC, Volatile Oil ≥ 4.0% v/w.
+          </p>
+</div>
+</div>
+</section>
+<!-- Column B: Potential Patent Overlaps -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-1 pb-1">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">policy</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Potential Patent Overlaps (Prior-Art Review Leads)</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Automated classification matching IPC A61K 36/9066 with global gazette publications
+        </p>
+</div>
+<!-- Cautionary Research Banner -->
+<div class="bg-surface-container-highest p-space-md rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5">info</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Examiner Alert • Statutory Notice</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+<span class="font-semibold text-on-surface">CAUTION:</span> These are research leads indicating thematic or botanical overlap for examiner review, not definitive infringement or invalidity findings.
+          </p>
+</div>
+</div>
+<!-- Card B1: High Overlap -->
+<article class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md relative overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-secondary-container"></div>
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-xs pl-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">US Patent US9,486,488B2</span>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#" title="External Gazette Link">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+              PharmaTech Innovations LLC • Granted Nov 8, 2016 • Active Status
+            </span>
+</div>
+<div class="flex flex-col items-start sm:items-end gap-1">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-secondary-fixed text-on-secondary-container rounded-full font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Review Lead: High Textual Overlap
+            </span>
+<span class="text-[11px] text-on-surface-variant font-label-sm">Claim Conflict Score: 89%</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-space-sm py-0.5 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm">
+            IPC: A61K 36/9066
+          </span>
+<span class="px-space-sm py-0.5 bg-surface-container rounded text-on-surface-variant font-label-sm text-label-sm">
+            Herb + Bioavailability Complex
+          </span>
+<span class="px-space-sm py-0.5 bg-surface-container rounded text-on-surface-variant font-label-sm text-label-sm">
+            Adjuvant: Zingiber Extract
+          </span>
+</div>
+<!-- Patent Abstract Snippet -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-md rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Independent Claim 1 Abstract Excerpt</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            “A pharmaceutical composition comprising standardized <span class="bg-surface-container-high font-semibold text-primary px-1 rounded">Curcuma longa extracts</span> formulated with bio-enhancing <span class="bg-surface-container-high font-semibold text-primary px-1 rounded">gingerols</span> for the reduction of systemic joint edema and arthritic cartilage degradation, wherein said turmeric and ginger extracts are combined in a synergistic 4:1 to 1:1 dry weight ratio...”
+          </p>
+</div>
+<!-- Classical Conflict Analysis Box -->
+<div class="flex flex-col gap-1.5 bg-surface-container p-space-md rounded">
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">balance</span>
+<span>Classical Conflict Analysis (Prior Art Correlation)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+            Claims formulation combining <span class="font-semibold text-primary">Curcuma extract with Zingiber compounds</span> for anti-inflammatory action — directly maps to <span class="font-semibold text-primary">Charaka Chikitsa Sthana 12:38</span> decoction ratio (<span class="italic text-on-surface-variant">Haridra + Nagara</span> synergistic compound for <span class="italic text-on-surface-variant">Shotha/Shula</span>).
+          </p>
+</div>
+<!-- Actions -->
+<div class="pt-space-sm flex items-center justify-between flex-wrap gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-1.5 px-space-md py-1.5 bg-primary text-on-primary hover:bg-primary-container rounded font-label-sm text-label-sm transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">compare_arrows</span>
+<span>Compare Claims vs Shloka</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-sm py-1.5 bg-surface-container-high hover:bg-surface-variant rounded text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Download Patent Specification</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">US Class: 424/756</span>
+</div>
+</article>
+<!-- Card B2: Moderate Overlap -->
+<article class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md relative overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-surface-container-highest"></div>
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-xs pl-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">EP Application EP3,119,402A1</span>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#" title="EPO Register Link">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+              EuroBiomedical AG • Filed Apr 14, 2018 • Under Examination
+            </span>
+</div>
+<div class="flex flex-col items-start sm:items-end gap-1">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-high text-on-surface rounded-full font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+              Review Lead: Moderate Contextual Overlap
+            </span>
+<span class="text-[11px] text-on-surface-variant font-label-sm">Claim Conflict Score: 68%</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-space-sm py-0.5 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm">
+            IPC: A61K 9/107
+          </span>
+<span class="px-space-sm py-0.5 bg-surface-container rounded text-on-surface-variant font-label-sm text-label-sm">
+            Topical Nano-Carrier
+          </span>
+<span class="px-space-sm py-0.5 bg-surface-container rounded text-on-surface-variant font-label-sm text-label-sm">
+            Curcumin Lipophilic Base
+          </span>
+</div>
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-md rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Application Abstract</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            “Topical nano-emulsion containing <span class="bg-surface-container-high font-semibold text-primary px-1 rounded">curcuminoids and sesquiterpenoids</span> for rapid transdermal alleviation of inflammatory rheumatoid pain and swelling, utilizing plant-derived lipid excipients...”
+          </p>
+</div>
+<div class="flex flex-col gap-1.5 bg-surface-container p-space-md rounded">
+<div class="flex items-center gap-1.5 text-primary font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">balance</span>
+<span>Classical Conflict Analysis (Prior Art Correlation)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+            Overlaps with Charaka <span class="italic font-medium text-primary">Shothahara lepa</span> (external topical pastes) applications documented in Charaka Samhita Sutra Sthana Ch. 3 (Aragvadhiya Adhyaya) employing Haridra powders in lipid/ghrita carriers for joint tumefaction.
+          </p>
+</div>
+<div class="pt-space-sm flex items-center justify-between flex-wrap gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-1.5 px-space-md py-1.5 bg-primary text-on-primary hover:bg-primary-container rounded font-label-sm text-label-sm transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">compare_arrows</span>
+<span>Compare Claims vs Shloka</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-space-sm py-1.5 bg-surface-container-high hover:bg-surface-variant rounded text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Download EP Document</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">EPO Ref: EP-3119402</span>
+</div>
+</article>
+</section>
+</div>
+<!-- Prior-Art Mapping Matrix (Deep Examination Table) -->
+<section class="mt-space-lg bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">table_chart</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Element-by-Element Statutory Mapping (Section 3(p) Pre-Check)</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Direct concordance table between Modern Patent Claims and Traditional Ayurvedic Canonical Literature
+        </p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Target Document:</span>
+<span class="font-label-sm text-label-sm font-semibold bg-surface-container px-2 py-1 rounded text-primary">US 9,486,488 B2</span>
+</div>
+</div>
+<!-- Responsive Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-high text-on-surface font-label-md text-label-md">
+<th class="py-3 px-space-md rounded-l">Patent Claim Element</th>
+<th class="py-3 px-space-md">Traditional Knowledge Corpus Equivalent</th>
+<th class="py-3 px-space-md">Ayurvedic Sanskrit Formulation</th>
+<th class="py-3 px-space-md">Therapeutic Indication Match</th>
+<th class="py-3 px-space-md rounded-r text-right">Examination Lead Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-body-sm font-body-sm">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-space-md font-medium text-on-surface">
+              Claim 1(a): Standardized Curcuma longa rhizome extract (curcuminoids ≥ 40%)
+            </td>
+<td class="py-3.5 px-space-md text-primary font-medium">
+              Haridra (Curcuma longa Linn.) Rhizome
+            </td>
+<td class="py-3.5 px-space-md font-citation text-on-surface-variant">
+              Charaka Chikitsa 12:38 (हरिद्रा)
+            </td>
+<td class="py-3.5 px-space-md text-on-surface-variant">
+              Shothahara (Swelling &amp; Edema Reduction)
+            </td>
+<td class="py-3.5 px-space-md text-right">
+<span class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[15px]">flag</span> Prior Art Direct Match
+              </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-space-md font-medium text-on-surface">
+              Claim 1(b): Bioavailability synergistic vehicle comprising Zingiber officinale fraction
+            </td>
+<td class="py-3.5 px-space-md text-primary font-medium">
+              Nagara / Sunthi (Zingiber officinale Rosc.)
+            </td>
+<td class="py-3.5 px-space-md font-citation text-on-surface-variant">
+              Charaka Chikitsa 12:38 (नागरं मुस्तं)
+            </td>
+<td class="py-3.5 px-space-md text-on-surface-variant">
+              Yogavahi / Deepana-Pachana synergist
+            </td>
+<td class="py-3.5 px-space-md text-right">
+<span class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[15px]">flag</span> Direct Compound Match
+              </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-space-md font-medium text-on-surface">
+              Claim 2: Oral dosage regimen for alleviation of arthritic osteo-degradation
+            </td>
+<td class="py-3.5 px-space-md text-primary font-medium">
+              Oral Kwatha administration (<span class="italic">Pibedesa</span>)
+            </td>
+<td class="py-3.5 px-space-md font-citation text-on-surface-variant">
+              Charaka Chikitsa 12:39 (क्वाथयित्वा पिबेदेष)
+            </td>
+<td class="py-3.5 px-space-md text-on-surface-variant">
+              Shotha-shula-nivaranah (Arthritis/Joint Pain relief)
+            </td>
+<td class="py-3.5 px-space-md text-right">
+<span class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[15px]">flag</span> Indication Identity
+              </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-space-md font-medium text-on-surface">
+              Claim 4: Inclusion of adjuvant polyphenol carrier matrix
+            </td>
+<td class="py-3.5 px-space-md text-on-surface-variant">
+              Triphala compound matrix (Phyllanthus emblica et al.)
+            </td>
+<td class="py-3.5 px-space-md font-citation text-on-surface-variant">
+              Charaka Chikitsa 12:39 (त्रिफला देवदारु)
+            </td>
+<td class="py-3.5 px-space-md text-on-surface-variant">
+              Rasayana / Free-radical scavenging
+            </td>
+<td class="py-3.5 px-space-md text-right">
+<span class="inline-flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[15px]">info</span> Substantial Equivalence
+              </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex items-center justify-between flex-wrap gap-space-sm pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Section 3(p) of the Patents Act, 1970 triggers when an invention in effect is traditional knowledge or an aggregation or duplication of known properties of traditionally known components.</span>
+</div>
+<a class="text-primary hover:underline font-semibold inline-flex items-center gap-1" href="#">
+<span>View Full Concordance Dossier</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Persistent Lead Classification & Disclaimer Note -->
+<aside class="mt-space-lg w-full bg-surface-container p-space-md rounded-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-start gap-space-sm max-w-4xl">
+<span class="material-symbols-outlined text-secondary text-[24px] shrink-0 mt-0.5">policy</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">
+          Lead Classification &amp; Non-Definitive Status Notice
+        </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          The patent references highlighted above represent high-concordance research leads identified by semantic vector comparison against codified Ayurvedic repositories (Charaka Samhita, Sushruta Samhita, and API monographs). These records do not constitute formal legal revocation or invalidity rulings. Patent examiners and counsel must perform independent claim-by-claim construction under statutory novelty and inventive step criteria.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 self-end md:self-center">
+<button class="px-space-md py-2 bg-surface-container-highest hover:bg-surface-variant text-on-surface rounded font-label-md text-label-md transition-colors" type="button">
+        Export Examination Sheet
+      </button>
+<button class="px-space-md py-2 bg-primary text-on-primary hover:bg-primary-container rounded font-label-md text-label-md transition-colors shadow-sm" type="button">
+        File Third-Party Observation
+      </button>
+</div>
+</aside>
+</div></main><footer class="w-full bg-surface-container-low border-t border-outline-variant/30 py-space-md"><div class="w-full px-gutter flex flex-col lg:flex-row items-center justify-between gap-space-md"><div class="flex items-start gap-space-sm max-w-4xl"><span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">verified_user</span><div class="flex flex-col"><span class="font-label-md text-label-md text-secondary font-semibold uppercase tracking-wider">Research Verification Notice</span><p class="font-citation text-citation text-on-surface-variant leading-relaxed">IP-SAKTI surfaces traditional knowledge prior art leads and patent index overlaps for prior-art examination. Outputs are research indicators and must be independently verified by registered patent agents and Ayurvedic pharmacologists.</p></div></div><div class="flex items-center gap-space-md shrink-0 text-on-surface-variant font-label-sm text-label-sm"><span>ISO 27001 Certified Research Workspace</span><span class="text-outline">|</span><span>Audit Hash: #TKDL-2024-EX</span></div></div></footer></div></body></html>
