@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_dashboard" name="shell-type"/>
+<title>IP-SAKTI | Traditional Knowledge Prior Art Intelligence</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface-variant": "#d9e3f6",
+        "surface-container-highest": "#d9e3f6",
+        "primary": "#07290c",
+        "on-surface-variant": "#424840",
+        "secondary-fixed-dim": "#ffb59e",
+        "outline": "#737970",
+        "on-primary-fixed": "#012106",
+        "tertiary-fixed-dim": "#a1d494",
+        "surface-container-lowest": "#ffffff",
+        "tertiary-fixed": "#bcf0ae",
+        "on-secondary-container": "#711d00",
+        "on-tertiary": "#ffffff",
+        "error-container": "#ffdad6",
+        "background": "#f8f9ff",
+        "primary-container": "#1e3f20",
+        "surface": "#f8f9ff",
+        "surface-container-high": "#dee9fc",
+        "primary-fixed": "#c5edc1",
+        "inverse-primary": "#aad1a6",
+        "on-primary-container": "#86ab83",
+        "inverse-surface": "#27313f",
+        "on-secondary": "#ffffff",
+        "on-primary-fixed-variant": "#2d4e2e",
+        "on-error": "#ffffff",
+        "tertiary": "#002a02",
+        "surface-tint": "#446744",
+        "on-tertiary-container": "#7dae71",
+        "outline-variant": "#c2c8be",
+        "secondary": "#a13f1f",
+        "on-tertiary-fixed": "#002201",
+        "on-background": "#121c2a",
+        "secondary-container": "#fc845e",
+        "on-error-container": "#93000a",
+        "secondary-fixed": "#ffdbd0",
+        "tertiary-container": "#144111",
+        "surface-container": "#e6eeff",
+        "inverse-on-surface": "#eaf1ff",
+        "error": "#ba1a1a",
+        "surface-bright": "#f8f9ff",
+        "on-primary": "#ffffff",
+        "on-tertiary-fixed-variant": "#23501e",
+        "on-secondary-fixed": "#3a0a00",
+        "primary-fixed-dim": "#aad1a6",
+        "surface-dim": "#d0dbed",
+        "surface-container-low": "#eff4ff",
+        "on-secondary-fixed-variant": "#812809",
+        "on-surface": "#121c2a"
+      },
+      borderRadius: {
+        DEFAULT: "0.125rem",
+        lg: "0.25rem",
+        xl: "0.5rem",
+        full: "0.75rem"
+      },
+      spacing: {
+        "space-md": "1rem",
+        "space-xs": "0.25rem",
+        gutter: "1.25rem",
+        "margin-mobile": "1rem",
+        "space-sm": "0.5rem",
+        "space-lg": "1.5rem",
+        margin: "2rem",
+        "gutter-mobile": "0.75rem",
+        "space-xl": "2.5rem"
+      },
+      fontFamily: {
+        "body-lg": ["Plus Jakarta Sans"],
+        "headline-md": ["Noto Serif"],
+        "label-md": ["Plus Jakarta Sans"],
+        display: ["Noto Serif"],
+        "headline-sm": ["Noto Serif"],
+        "label-lg": ["Plus Jakarta Sans"],
+        "body-md": ["Plus Jakarta Sans"],
+        citation: ["Noto Serif"],
+        "body-sm": ["Plus Jakarta Sans"],
+        "label-sm": ["Plus Jakarta Sans"],
+        "headline-lg-mobile": ["Noto Serif"],
+        "display-mobile": ["Noto Serif"],
+        "headline-lg": ["Noto Serif"]
+      },
+      fontSize: {
+        "body-lg": ["1.125rem", { lineHeight: "1.75rem", fontWeight: "400" }],
+        "headline-md": ["1.5rem", { lineHeight: "2rem", fontWeight: "600" }],
+        "label-md": ["0.75rem", { lineHeight: "1rem", letterSpacing: "0.025em", fontWeight: "600" }],
+        display: ["2.25rem", { lineHeight: "2.75rem", letterSpacing: "-0.02em", fontWeight: "600" }],
+        "headline-sm": ["1.25rem", { lineHeight: "1.75rem", fontWeight: "600" }],
+        "label-lg": ["0.875rem", { lineHeight: "1.25rem", letterSpacing: "0.01em", fontWeight: "600" }],
+        "body-md": ["0.9375rem", { lineHeight: "1.5rem", fontWeight: "400" }],
+        citation: ["0.875rem", { lineHeight: "1.5rem", letterSpacing: "0.01em", fontWeight: "400" }],
+        "body-sm": ["0.8125rem", { lineHeight: "1.25rem", fontWeight: "400" }],
+        "label-sm": ["0.6875rem", { lineHeight: "0.875rem", letterSpacing: "0.05em", fontWeight: "600" }],
+        "headline-lg-mobile": ["1.5rem", { lineHeight: "2rem", letterSpacing: "-0.01em", fontWeight: "600" }],
+        "display-mobile": ["1.75rem", { lineHeight: "2.25rem", letterSpacing: "-0.01em", fontWeight: "600" }],
+        "headline-lg": ["1.875rem", { lineHeight: "2.375rem", letterSpacing: "-0.015em", fontWeight: "600" }]
+      }
+    }
+  }
+};
+</script>
+<style>
+@layer base {
+  html, body { margin: 0; padding: 0; }
+  body { overscroll-behavior: none; }
+}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #c2c8be; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #737970; }
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.animate-fadeInUp { animation: fadeInUp 0.4s ease-out forwards; }
+.animate-fadeIn { animation: fadeIn 0.3s ease-out forwards; }
+.stagger-1 { animation-delay: 0.05s; }
+.stagger-2 { animation-delay: 0.1s; }
+.stagger-3 { animation-delay: 0.15s; }
+.stagger-4 { animation-delay: 0.2s; }
+.stagger-5 { animation-delay: 0.25s; }
+
+.skeleton-shimmer {
+  background: linear-gradient(90deg, #e6eeff 25%, #dee9fc 50%, #e6eeff 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Mobile sidebar toggle */
+@media (max-width: 1023px) {
+  .sidebar { transform: translateX(-100%); transition: transform 0.3s ease; }
+  .sidebar.open { transform: translateX(0); }
+  .sidebar-overlay { display: none; }
+  .sidebar-overlay.active { display: block; }
+  .main-content { padding-left: 0 !important; }
+  .header-offset { left: 0 !important; }
+}
+</style>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased">
+
+<!-- Mobile Sidebar Overlay -->
+<div class="sidebar-overlay fixed inset-0 bg-black/30 z-40 lg:hidden" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+<!-- ============ SIDEBAR ============ -->
+<aside class="sidebar fixed left-0 top-0 h-full w-64 bg-surface-container-low border-r border-outline-variant/30 z-50 flex flex-col justify-between py-space-md lg:translate-x-0" id="sidebar">
+  <div class="flex flex-col">
+    <!-- Brand -->
+    <div class="px-space-md pb-space-lg border-b border-outline-variant/20 flex items-center gap-space-sm">
+      <div class="w-8 h-8 rounded bg-primary-container flex items-center justify-center">
+        <span class="material-symbols-outlined text-on-primary text-[18px]">local_library</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none">IP-SAKTI</span>
+        <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Examiner Portal</span>
+      </div>
+    </div>
+    <!-- Corpus Status -->
+    <div class="px-space-md py-space-sm">
+      <div class="px-space-sm py-1.5 bg-surface-container rounded flex items-center justify-between text-on-surface font-label-sm text-label-sm">
+        <span class="text-on-surface-variant font-medium">TKDL Indexed</span>
+        <span class="font-semibold text-primary" id="corpus-count">—</span>
+      </div>
+    </div>
+    <!-- Navigation -->
+    <nav class="flex flex-col gap-1 px-space-sm mt-space-sm" id="nav-links">
+      <a aria-current="page" class="nav-link active flex items-center gap-space-sm px-space-md py-2.5 rounded transition-colors bg-primary-container text-on-primary font-bold" data-page="overview" href="#">
+        <span class="material-symbols-outlined text-[18px]">dashboard</span>
+        <span>Overview</span>
+      </a>
+      <a class="nav-link flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-lg text-label-lg" data-page="prior-art-search" href="#">
+        <span class="material-symbols-outlined text-[18px]">search</span>
+        <span>Prior Art Search</span>
+      </a>
+      <a class="nav-link flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-lg text-label-lg" data-page="dossier-comparison" href="#">
+        <span class="material-symbols-outlined text-[18px]">compare_arrows</span>
+        <span>Dossier Examination</span>
+      </a>
+      <a class="nav-link flex items-center gap-space-sm px-space-md py-2.5 rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-lg text-label-lg" data-page="statutory-corpus" href="#">
+        <span class="material-symbols-outlined text-[18px]">library_books</span>
+        <span>Statutory Corpus</span>
+      </a>
+    </nav>
+  </div>
+  <!-- Footer Badge -->
+  <div class="px-space-md pt-space-sm border-t border-outline-variant/20 flex flex-col gap-space-xs">
+    <div class="flex items-center gap-space-xs text-label-sm font-label-sm text-on-surface-variant">
+      <span class="material-symbols-outlined text-[14px] text-tertiary">shield</span>
+      <span>Statutory S. 3(p) Filter</span>
+    </div>
+    <span class="text-[11px] text-outline leading-tight">Govt. of India • CSIR / TKDL Directorate</span>
+    <!-- API Health Status -->
+    <div class="flex items-center gap-space-xs mt-1" id="health-indicator">
+      <span class="w-2 h-2 rounded-full bg-outline" id="health-dot"></span>
+      <span class="text-[11px] text-outline" id="health-text">Checking API...</span>
+    </div>
+  </div>
+</aside>
+
+<!-- ============ MAIN CONTAINER ============ -->
+<div class="main-content pl-0 lg:pl-64">
+  <!-- Header -->
+  <header class="header-offset fixed top-0 left-0 lg:left-64 right-0 h-14 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(7,41,12,0.05)] border-b border-outline-variant/30 z-40 flex items-center justify-between px-gutter">
+    <div class="flex items-center gap-space-sm">
+      <!-- Mobile menu button -->
+      <button class="lg:hidden inline-flex items-center justify-center w-8 h-8 text-on-surface-variant hover:text-primary" onclick="toggleSidebar()">
+        <span class="material-symbols-outlined text-[22px]">menu</span>
+      </button>
+      <div class="hidden sm:inline-flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-high rounded text-on-surface font-label-md text-label-md">
+        <span class="material-symbols-outlined text-primary text-[15px]">menu_book</span>
+        <span>Charaka Samhita • NIIMH e-Samhita Cross-Index</span>
+      </div>
+      <div class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-primary-fixed/50 text-on-primary-fixed-variant rounded font-label-sm text-label-sm">
+        <span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+        <span>Corpus Sync: Active</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-space-sm">
+      <button class="hidden sm:inline-flex items-center gap-1.5 px-space-md py-1.5 bg-primary-container text-on-primary rounded text-label-md font-label-md hover:bg-primary transition-colors" id="export-btn" type="button" disabled>
+        <span class="material-symbols-outlined text-[16px]">file_download</span>
+        <span>Export Report</span>
+      </button>
+      <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0">
+        <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ MAIN CONTENT AREA ============ -->
+  <main class="relative pt-14 bg-surface min-h-screen w-full">
+
+    <!-- ============ PAGE: OVERVIEW (Landing + Search) ============ -->
+    <div class="page-content px-gutter" id="page-overview">
+      <div class="flex flex-col w-full">
+        <!-- Hero Search Section -->
+        <div class="relative py-space-xl px-4 md:px-margin overflow-hidden bg-surface">
+          <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-primary-fixed/30 blur-3xl pointer-events-none"></div>
+          <div class="absolute top-1/2 -left-20 w-80 h-80 rounded-full bg-secondary-fixed/20 blur-3xl pointer-events-none"></div>
+          <div class="max-w-5xl mx-auto flex flex-col items-center text-center relative z-10">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-space-xs px-space-md py-1 bg-surface-container rounded-full shadow-sm mb-space-md flex-wrap justify-center">
+              <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+              <span class="font-label-md text-label-md text-primary font-semibold tracking-wide uppercase">Ayurvedic Prior Art &amp; Patent Overlap Discovery</span>
+              <span class="text-outline text-label-sm hidden sm:inline">|</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant hidden sm:inline">S. 3(p) Patent Act Compliance</span>
+            </div>
+            <!-- Title -->
+            <h1 class="font-display text-display-mobile md:text-display text-primary tracking-tight max-w-4xl leading-tight mb-space-sm">
+              Traditional Knowledge, Verified Against Global Patents
+            </h1>
+            <p class="font-citation text-citation text-on-surface-variant max-w-3xl leading-relaxed mb-space-lg">
+              Cross-reference Ayurvedic pharmacology from the <span class="text-primary font-semibold">Charaka Samhita</span> with active patent claims to establish prior art, assess biopiracy risks, and validate classical botanical therapeutics.
+            </p>
+
+            <!-- ===== SEARCH BAR ===== -->
+            <div class="w-full bg-surface-container-lowest rounded-xl shadow-xl p-space-sm transition-all duration-200">
+              <form id="query-form" class="flex flex-col md:flex-row items-center gap-space-sm">
+                <div class="flex items-center gap-space-xs pl-space-sm text-on-surface-variant shrink-0">
+                  <span class="material-symbols-outlined text-[22px] text-primary">search</span>
+                </div>
+                <div class="flex-1 w-full text-left">
+                  <input class="w-full bg-transparent text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none py-2 px-1" id="query-input"
+                    placeholder="Ask about a symptom, herb, formulation, or treatment (e.g., Haridra for inflammation, Vata disorders)..."
+                    type="text" autocomplete="off"/>
+                </div>
+                <div class="flex flex-wrap items-center gap-space-xs w-full md:w-auto shrink-0 justify-end">
+                  <button class="inline-flex items-center justify-center gap-2 px-space-lg py-2.5 bg-primary-container text-on-primary rounded font-label-lg text-label-lg hover:bg-primary shadow-md hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed" id="submit-btn" type="submit">
+                    <span id="submit-text">Run Research Query</span>
+                    <span class="material-symbols-outlined text-[18px]" id="submit-icon">arrow_forward</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Pre-validated Query Chips -->
+            <div class="mt-space-md flex flex-wrap items-center justify-center gap-space-xs text-on-surface-variant">
+              <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline mr-1">Pre-validated Queries:</span>
+              <button class="query-chip inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container rounded-full text-on-surface font-label-md text-label-md hover:bg-surface-container-high hover:text-primary transition-colors" data-query="turmeric / haridra for joint inflammation" type="button">
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                <span>turmeric / haridra for joint inflammation</span>
+              </button>
+              <button class="query-chip inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container rounded-full text-on-surface font-label-md text-label-md hover:bg-surface-container-high hover:text-primary transition-colors" data-query="vata imbalance classical symptoms" type="button">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                <span>vata imbalance classical symptoms</span>
+              </button>
+              <button class="query-chip inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container rounded-full text-on-surface font-label-md text-label-md hover:bg-surface-container-high hover:text-primary transition-colors" data-query="ashwagandha withanolides for stress" type="button">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                <span>ashwagandha for stress attenuation</span>
+              </button>
+              <button class="query-chip inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container rounded-full text-on-surface font-label-md text-label-md hover:bg-surface-container-high hover:text-primary transition-colors" data-query="neem / nimba antimicrobial oral care" type="button">
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                <span>neem / nimba antimicrobial oral care</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== RESULTS CONTAINER ===== -->
+        <div class="px-4 md:px-margin py-space-lg w-full max-w-7xl mx-auto" id="results-container">
+          <!-- Results will be rendered here by JavaScript -->
+        </div>
+
+        <!-- ===== BENCHMARKS (shown on overview page) ===== -->
+        <div class="px-4 md:px-margin py-space-lg w-full max-w-7xl mx-auto" id="benchmarks-section">
+          <div class="flex items-center justify-between mb-space-md">
+            <div>
+              <h2 class="font-headline-sm text-headline-sm text-primary">Codex Intelligence Benchmarks</h2>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Deterministic alignment of Ayurvedic pharmacopeia with international IP classification systems</p>
+            </div>
+            <div class="hidden sm:flex items-center gap-2">
+              <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-surface-container rounded text-label-sm font-label-sm text-on-surface-variant">
+                <span class="material-symbols-outlined text-[14px] text-primary">verified</span> WIPO ST.36 Compatible
+              </span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-space-xl">
+            <!-- Benchmark Card 1 -->
+            <div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-space-md">
+                  <span class="inline-flex p-2.5 bg-primary-fixed/40 text-primary-container rounded">
+                    <span class="material-symbols-outlined text-[24px]">menu_book</span>
+                  </span>
+                  <span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container rounded text-primary font-semibold">NIIMH Corpus</span>
+                </div>
+                <div class="flex items-baseline gap-2 mb-1">
+                  <span class="font-display text-display text-primary font-bold" id="stat-chapters">—</span>
+                  <span class="font-headline-sm text-headline-sm text-on-surface">Chapters Indexed</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+                  Charaka Samhita corpus with Devanagari Sanskrit text, semantic embeddings across all classical Sthanas.
+                </p>
+              </div>
+              <div class="pt-space-sm border-t border-outline-variant/20 flex flex-col gap-1.5">
+                <div class="flex justify-between items-center text-label-sm font-label-sm">
+                  <span class="text-on-surface-variant">Embedding Model</span>
+                  <span class="text-primary font-semibold">MiniLM-L12 v2</span>
+                </div>
+                <div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+                  <div class="bg-primary-container h-full w-full rounded-full"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Benchmark Card 2 -->
+            <div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-space-md">
+                  <span class="inline-flex p-2.5 bg-secondary-fixed/40 text-secondary rounded">
+                    <span class="material-symbols-outlined text-[24px]">hub</span>
+                  </span>
+                  <span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container rounded text-secondary font-semibold">A61K IPC</span>
+                </div>
+                <div class="flex items-baseline gap-2 mb-1">
+                  <span class="font-display text-display text-primary font-bold" id="stat-patents">—</span>
+                  <span class="font-headline-sm text-headline-sm text-on-surface">Patent Records</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+                  Scanned against TKDL classification codes, bridging botanical taxon synonyms with patent claims across global jurisdictions.
+                </p>
+              </div>
+              <div class="pt-space-sm border-t border-outline-variant/20 flex flex-col gap-1.5">
+                <div class="flex justify-between items-center text-label-sm font-label-sm">
+                  <span class="text-on-surface-variant">Cross-Reference Sync</span>
+                  <span class="text-secondary font-semibold">Active</span>
+                </div>
+                <div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+                  <div class="bg-secondary-container h-full w-[88%] rounded-full"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Benchmark Card 3 -->
+            <div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-space-md">
+                  <span class="inline-flex p-2.5 bg-tertiary-fixed/40 text-tertiary-container rounded">
+                    <span class="material-symbols-outlined text-[24px]">verified_user</span>
+                  </span>
+                  <span class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container rounded text-tertiary font-semibold">Strict Provenance</span>
+                </div>
+                <div class="flex items-baseline gap-2 mb-1">
+                  <span class="font-display text-display text-primary font-bold">0.30</span>
+                  <span class="font-headline-sm text-headline-sm text-on-surface">Abstention Threshold</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+                  Honest abstention: no prior art candidate is surfaced without minimum semantic confidence. Prevents false-positive hallucination.
+                </p>
+              </div>
+              <div class="pt-space-sm border-t border-outline-variant/20 flex flex-col gap-1.5">
+                <div class="flex justify-between items-center text-label-sm font-label-sm">
+                  <span class="text-on-surface-variant">Cosine Distance Anchor</span>
+                  <span class="text-tertiary font-semibold">≥ 0.30 Precision Cutoff</span>
+                </div>
+                <div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+                  <div class="bg-primary-container h-full w-[96%] rounded-full"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Research Integrity Banner -->
+          <div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+            <div class="flex items-start gap-space-md max-w-4xl">
+              <span class="inline-flex p-2 bg-secondary-fixed/50 text-secondary rounded shrink-0 mt-1">
+                <span class="material-symbols-outlined text-[24px]">verified</span>
+              </span>
+              <div class="flex flex-col">
+                <span class="font-label-lg text-label-lg font-bold text-primary">Research Integrity &amp; Quality Governance</span>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  All similarity indices are generated under the CSIR-TKDL validation protocol. Results establish prior art indicators under Section 3(p) of the Indian Patents Act. Patent results are leads for manual review, not confirmed findings.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ PAGE: PRIOR ART SEARCH (alias for results) ============ -->
+    <div class="page-content px-gutter hidden" id="page-prior-art-search">
+      <div class="py-space-xl flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
+        <span class="material-symbols-outlined text-primary text-[48px] mb-space-md">search</span>
+        <h2 class="font-headline-md text-headline-md text-primary mb-space-sm">Prior Art Search</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+          Use the search bar above on the Overview page to query the NIIMH traditional knowledge corpus and cross-reference with global patent databases.
+        </p>
+        <button class="px-space-lg py-2.5 bg-primary-container text-on-primary rounded font-label-lg text-label-lg hover:bg-primary transition-colors" onclick="navigateTo('overview'); document.getElementById('query-input').focus();">
+          Go to Search
+        </button>
+      </div>
+    </div>
+
+    <!-- ============ PAGE: DOSSIER ============ -->
+    <div class="page-content px-gutter hidden" id="page-dossier-comparison">
+      <div class="py-space-xl flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
+        <span class="material-symbols-outlined text-primary text-[48px] mb-space-md">compare_arrows</span>
+        <h2 class="font-headline-md text-headline-md text-primary mb-space-sm">Dossier Examination</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+          Side-by-side comparison of patent claims against classical Ayurvedic verse sources. Run a query first to populate dossier cards.
+        </p>
+        <button class="px-space-lg py-2.5 bg-primary-container text-on-primary rounded font-label-lg text-label-lg hover:bg-primary transition-colors" onclick="navigateTo('overview'); document.getElementById('query-input').focus();">
+          Start a Query
+        </button>
+      </div>
+    </div>
+
+    <!-- ============ PAGE: STATUTORY CORPUS ============ -->
+    <div class="page-content px-gutter hidden" id="page-statutory-corpus">
+      <div class="py-space-xl flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
+        <span class="material-symbols-outlined text-primary text-[48px] mb-space-md">library_books</span>
+        <h2 class="font-headline-md text-headline-md text-primary mb-space-sm">Statutory Corpus</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant">
+          Full-text access to codified traditional knowledge texts indexed in the Qdrant vector database. Browse the indexed corpus of NIIMH e-Samhita chapters and patent records.
+        </p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full bg-surface-container-low border-t border-outline-variant/30 py-space-md">
+    <div class="w-full px-gutter flex flex-col lg:flex-row items-center justify-between gap-space-md">
+      <div class="flex items-start gap-space-sm max-w-4xl">
+        <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">verified_user</span>
+        <div class="flex flex-col">
+          <span class="font-label-md text-label-md text-secondary font-semibold uppercase tracking-wider">Research Verification Notice</span>
+          <p class="font-citation text-citation text-on-surface-variant leading-relaxed">IP-SAKTI surfaces traditional knowledge prior art leads and patent index overlaps for prior-art examination. Outputs are research indicators and must be independently verified by registered patent agents.</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-space-md shrink-0 text-on-surface-variant font-label-sm text-label-sm">
+        <span>CSIR-TKDL Research Workspace</span>
+        <span class="text-outline">|</span>
+        <span id="session-ref">Session: —</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ============ JAVASCRIPT: API INTEGRATION ============ -->
+<script>
+(function () {
+  'use strict';
+
+  // ===== CONFIGURATION =====
+  const API_BASE = 'http://localhost:8000';
+  const QUERY_ENDPOINT = `${API_BASE}/query`;
+  const HEALTH_ENDPOINT = `${API_BASE}/health`;
+
+  // ===== STATE =====
+  let currentQuery = '';
+  let lastResponse = null;
+  let isLoading = false;
+  let sessionId = `TKDL-${Date.now().toString(36).toUpperCase()}`;
+
+  // ===== DOM REFERENCES =====
+  const queryForm = document.getElementById('query-form');
+  const queryInput = document.getElementById('query-input');
+  const submitBtn = document.getElementById('submit-btn');
+  const submitText = document.getElementById('submit-text');
+  const submitIcon = document.getElementById('submit-icon');
+  const resultsContainer = document.getElementById('results-container');
+  const benchmarksSection = document.getElementById('benchmarks-section');
+  const exportBtn = document.getElementById('export-btn');
+  const healthDot = document.getElementById('health-dot');
+  const healthText = document.getElementById('health-text');
+  const sessionRef = document.getElementById('session-ref');
+
+  sessionRef.textContent = `Session: #${sessionId}`;
+
+  // ===== UTILITIES =====
+  function escapeHtml(str) {
+    if (!str) return '';
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function truncate(str, maxLen) {
+    if (!str || str.length <= maxLen) return str;
+    return str.slice(0, maxLen) + '…';
+  }
+
+  function formatScore(score) {
+    return (score * 100).toFixed(1) + '%';
+  }
+
+  function getOverlapLevel(score) {
+    if (score >= 0.5) return { label: 'High Overlap', color: 'bg-secondary-fixed text-on-secondary-container', dot: 'bg-secondary' };
+    if (score >= 0.35) return { label: 'Moderate Overlap', color: 'bg-surface-container-high text-on-surface', dot: 'bg-outline' };
+    return { label: 'Low Overlap', color: 'bg-surface-container text-on-surface-variant', dot: 'bg-outline-variant' };
+  }
+
+  function getConfidenceLevel(score) {
+    if (score >= 0.5) return { label: 'High', color: 'text-primary' };
+    if (score >= 0.35) return { label: 'Moderate', color: 'text-on-surface-variant' };
+    return { label: 'Low', color: 'text-outline' };
+  }
+
+  // ===== SIDEBAR NAVIGATION =====
+  window.toggleSidebar = function () {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    sidebar.classList.toggle('open');
+    overlay.classList.toggle('active');
+  };
+
+  window.navigateTo = function (page) {
+    // Update nav links
+    document.querySelectorAll('.nav-link').forEach(link => {
+      if (link.dataset.page === page) {
+        link.classList.add('bg-primary-container', 'text-on-primary', 'font-bold', 'active');
+        link.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-high', 'hover:text-on-surface', 'font-label-lg', 'text-label-lg');
+        link.setAttribute('aria-current', 'page');
+      } else {
+        link.classList.remove('bg-primary-container', 'text-on-primary', 'font-bold', 'active');
+        link.classList.add('text-on-surface-variant', 'hover:bg-surface-container-high', 'hover:text-on-surface', 'font-label-lg', 'text-label-lg');
+        link.removeAttribute('aria-current');
+      }
+    });
+
+    // Show/hide pages
+    document.querySelectorAll('.page-content').forEach(p => p.classList.add('hidden'));
+    const pageEl = document.getElementById(`page-${page}`);
+    if (pageEl) pageEl.classList.remove('hidden');
+
+    // Close mobile sidebar
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    sidebar.classList.remove('open');
+    overlay.classList.remove('active');
+  };
+
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      navigateTo(link.dataset.page);
+    });
+  });
+
+  // ===== QUERY CHIPS =====
+  document.querySelectorAll('.query-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const query = chip.dataset.query;
+      if (queryInput && query) {
+        queryInput.value = query;
+        queryInput.focus();
+        // Auto-submit
+        handleQuery(query);
+      }
+    });
+  });
+
+  // ===== HEALTH CHECK =====
+  async function checkHealth() {
+    try {
+      const res = await fetch(HEALTH_ENDPOINT, { signal: AbortSignal.timeout(3000) });
+      const data = await res.json();
+      if (data.status === 'ok') {
+        healthDot.className = 'w-2 h-2 rounded-full bg-primary-container animate-pulse';
+        healthText.textContent = 'API Connected';
+        healthText.className = 'text-[11px] text-primary leading-tight';
+        return true;
+      }
+    } catch (e) {
+      healthDot.className = 'w-2 h-2 rounded-full bg-error';
+      healthText.textContent = 'API Offline';
+      healthText.className = 'text-[11px] text-error leading-tight';
+      return false;
+    }
+  }
+
+  // Check health on load and periodically
+  checkHealth();
+  setInterval(checkHealth, 30000);
+
+  // ===== LOADING STATE =====
+  function renderLoadingState(query) {
+    benchmarksSection.classList.add('hidden');
+    resultsContainer.innerHTML = `
+      <div class="animate-fadeIn">
+        <!-- Query Context Strip -->
+        <section class="w-full bg-surface-container-low rounded-lg p-space-md shadow-sm mb-space-lg flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-md">
+          <div class="flex flex-col gap-space-xs">
+            <div class="flex items-center gap-space-sm flex-wrap">
+              <span class="inline-flex items-center gap-1 px-2 py-0.5 bg-primary-container text-on-primary rounded font-label-sm text-label-sm uppercase tracking-wider">
+                <span class="material-symbols-outlined text-[13px] animate-spin">refresh</span> Processing Query
+              </span>
+              <span class="font-label-md text-label-md text-on-surface-variant">Session: #${sessionId}</span>
+            </div>
+            <span class="font-headline-sm text-headline-sm text-primary tracking-tight">"${escapeHtml(truncate(query, 100))}"</span>
+          </div>
+        </section>
+
+        <!-- Processing Animation -->
+        <div class="flex flex-col items-center justify-center py-16 gap-space-lg">
+          <div class="relative">
+            <div class="w-20 h-20 rounded-full bg-primary-fixed/30 flex items-center justify-center">
+              <span class="material-symbols-outlined text-primary text-[36px] animate-pulse">auto_stories</span>
+            </div>
+            <div class="absolute inset-0 w-20 h-20 rounded-full border-2 border-primary-container/50" style="animation: pulse-ring 2s cubic-bezier(0.4,0,0.6,1) infinite;"></div>
+          </div>
+          <div class="text-center">
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Scanning Corpus &amp; Patent Index</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+              Encoding query vector via paraphrase-multilingual-MiniLM-L12-v2 and searching NIIMH traditional knowledge collection and patent database simultaneously...
+            </p>
+          </div>
+
+          <!-- Processing Steps Skeleton -->
+          <div class="w-full max-w-lg flex flex-col gap-space-sm mt-space-md">
+            <div class="flex items-center gap-space-sm">
+              <span class="material-symbols-outlined text-primary text-[18px] animate-spin">refresh</span>
+              <span class="font-label-md text-label-md text-primary">Encoding query vector (384 dimensions)...</span>
+            </div>
+            <div class="flex items-center gap-space-sm opacity-60">
+              <span class="material-symbols-outlined text-on-surface-variant text-[18px]">schedule</span>
+              <span class="font-label-md text-label-md text-on-surface-variant">Searching NIIMH corpus (Top-5)...</span>
+            </div>
+            <div class="flex items-center gap-space-sm opacity-40">
+              <span class="material-symbols-outlined text-on-surface-variant text-[18px]">schedule</span>
+              <span class="font-label-md text-label-md text-on-surface-variant">Searching patent index (Top-3)...</span>
+            </div>
+            <div class="flex items-center gap-space-sm opacity-20">
+              <span class="material-symbols-outlined text-on-surface-variant text-[18px]">schedule</span>
+              <span class="font-label-md text-label-md text-on-surface-variant">Applying abstention threshold (≥ 0.30)...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // ===== RESULTS RENDERING =====
+  function renderResults(data, query) {
+    benchmarksSection.classList.add('hidden');
+    exportBtn.disabled = false;
+    lastResponse = data;
+
+    const niimhAbstained = data.niimh.abstained;
+    const niimhResults = data.niimh.results || [];
+    const patentResults = data.potential_patent_overlap || [];
+    const topScore = data.niimh.top_score;
+
+    let html = '<div class="flex flex-col pb-space-xl">';
+
+    // === Query Context Strip ===
+    html += `
+      <section class="w-full bg-surface-container-low rounded-lg p-space-md shadow-sm mb-space-lg flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-md animate-fadeInUp">
+        <div class="flex flex-col gap-space-xs max-w-4xl">
+          <div class="flex items-center gap-space-sm flex-wrap">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 bg-primary-container text-on-primary rounded font-label-sm text-label-sm uppercase tracking-wider">
+              <span class="material-symbols-outlined text-[13px]">verified</span> Research Complete
+            </span>
+            <span class="font-label-md text-label-md text-on-surface-variant">Session: #${sessionId}</span>
+          </div>
+          <span class="font-headline-sm text-headline-sm text-primary tracking-tight">"${escapeHtml(truncate(query, 120))}"</span>
+          <div class="flex items-center gap-space-xs flex-wrap pt-1">
+            <span class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-high text-primary rounded font-label-sm text-label-sm">
+              <span class="material-symbols-outlined text-[14px] text-tertiary">menu_book</span>
+              Corpus: NIIMH e-Samhita (Charaka Samhita)
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-high text-primary rounded font-label-sm text-label-sm">
+              <span class="material-symbols-outlined text-[14px] text-primary">public</span>
+              Patents: Global Index
+            </span>
+          </div>
+        </div>
+        <div class="flex items-center gap-space-sm shrink-0 self-end xl:self-center">
+          <button class="inline-flex items-center gap-1.5 px-space-md py-2 bg-surface-container-highest text-on-surface hover:bg-surface-variant rounded font-label-md text-label-md transition-colors" type="button" onclick="queryInput.focus(); queryInput.select();">
+            <span class="material-symbols-outlined text-[16px]">tune</span>
+            <span>Edit Query</span>
+          </button>
+        </div>
+      </section>
+    `;
+
+    // === Metrics Ribbon ===
+    html += `
+      <section class="grid grid-cols-2 md:grid-cols-4 gap-space-sm mb-space-lg animate-fadeInUp stagger-1">
+        <div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex items-center justify-between">
+          <div class="flex flex-col">
+            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">NIIMH Results</span>
+            <span class="font-headline-md text-headline-md text-primary mt-0.5">${niimhAbstained ? 'Abstained' : niimhResults.length + ' Chunks'}</span>
+          </div>
+          <div class="w-10 h-10 rounded-full ${niimhAbstained ? 'bg-surface-container-high' : 'bg-primary-fixed'} flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-[20px]">${niimhAbstained ? 'block' : 'auto_stories'}</span>
+          </div>
+        </div>
+        <div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex items-center justify-between">
+          <div class="flex flex-col">
+            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Patent Leads</span>
+            <span class="font-headline-md text-headline-md text-secondary mt-0.5">${patentResults.length} Found</span>
+          </div>
+          <div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-container">
+            <span class="material-symbols-outlined text-[20px]">${patentResults.length > 0 ? 'warning' : 'check_circle'}</span>
+          </div>
+        </div>
+        <div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex items-center justify-between">
+          <div class="flex flex-col">
+            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">NIIMH Top Score</span>
+            <span class="font-headline-md text-headline-md text-primary mt-0.5">${topScore != null ? topScore.toFixed(3) : 'N/A'}</span>
+          </div>
+          <div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-[20px]">analytics</span>
+          </div>
+        </div>
+        <div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex items-center justify-between">
+          <div class="flex flex-col">
+            <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Threshold</span>
+            <span class="font-headline-md text-headline-md text-primary mt-0.5">${data.niimh.threshold}</span>
+          </div>
+          <div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-[20px]">gavel</span>
+          </div>
+        </div>
+      </section>
+    `;
+
+    // === Two Column Grid ===
+    html += '<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg items-start">';
+
+    // === Column A: NIIMH Traditional Knowledge ===
+    html += '<section class="flex flex-col gap-space-md animate-fadeInUp stagger-2">';
+    html += `
+      <div class="flex flex-col gap-1 pb-1">
+        <div class="flex items-center gap-space-xs">
+          <span class="material-symbols-outlined text-primary text-[20px]">menu_book</span>
+          <h2 class="font-headline-sm text-headline-sm text-primary">Traditional Knowledge (NIIMH)</h2>
+        </div>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">
+          Grounded in Charaka Samhita • Verified Sanskrit text from NIIMH e-Samhita corpus
+        </p>
+      </div>
+    `;
+
+    if (niimhAbstained) {
+      // === ABSTENTION STATE ===
+      html += `
+        <div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md relative overflow-hidden">
+          <div class="absolute top-0 left-0 bottom-0 w-1.5 bg-outline-variant"></div>
+          <div class="flex items-start gap-space-md pl-space-xs">
+            <div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-on-surface-variant text-[28px]">shield</span>
+            </div>
+            <div class="flex flex-col gap-space-xs">
+              <h3 class="font-headline-sm text-headline-sm text-on-surface">Honest Abstention — Insufficient Evidence</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                The NIIMH corpus search did not return results above the confidence threshold. IP-SAKTI abstains from surfacing weak matches to prevent false-positive prior art assertions.
+              </p>
+            </div>
+          </div>
+          <div class="bg-surface-container-low p-space-md rounded flex flex-col gap-space-sm">
+            <div class="flex items-center justify-between text-label-sm font-label-sm">
+              <span class="text-on-surface-variant">Top Similarity Score</span>
+              <span class="text-on-surface font-semibold">${topScore != null ? topScore.toFixed(4) : 'N/A'}</span>
+            </div>
+            <div class="flex items-center justify-between text-label-sm font-label-sm">
+              <span class="text-on-surface-variant">Required Threshold</span>
+              <span class="text-primary font-semibold">${data.niimh.threshold}</span>
+            </div>
+            <div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden mt-1">
+              <div class="bg-outline h-full rounded-full transition-all" style="width: ${topScore != null ? Math.min((topScore / data.niimh.threshold) * 100, 100) : 0}%"></div>
+            </div>
+            <span class="text-[11px] text-outline">Score fell below the minimum cosine similarity required for reliable traditional knowledge matching</span>
+          </div>
+          <div class="bg-surface-container p-space-md rounded flex items-start gap-space-sm">
+            <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">info</span>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">
+              <strong class="text-on-surface">Why abstain?</strong> Sanskrit cross-lingual embedding matching is inherently harder than English patent matching. NIIMH abstention does <em>not</em> invalidate patent overlap results — those searches run independently.
+            </p>
+          </div>
+        </div>
+      `;
+    } else {
+      // === NIIMH RESULTS CARDS ===
+      niimhResults.forEach((r, i) => {
+        const confidence = getConfidenceLevel(r.score);
+        const isDevanagari = /[\u0900-\u097F]/.test(r.text || '');
+
+        html += `
+          <article class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md relative overflow-hidden animate-fadeInUp stagger-${Math.min(i + 2, 5)}">
+            <div class="absolute top-0 left-0 bottom-0 w-1.5 ${r.score >= 0.5 ? 'bg-primary-container' : 'bg-outline-variant'}"></div>
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs pl-space-xs">
+              <div class="flex flex-col">
+                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+                  ${escapeHtml(r.chunk_type || 'Chunk')} • ${escapeHtml(r.chunk_id || 'Unknown')}
+                </span>
+              </div>
+              <span class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-high ${confidence.color} rounded-full font-label-sm text-label-sm self-start sm:self-auto font-medium">
+                <span class="w-2 h-2 rounded-full ${r.score >= 0.5 ? 'bg-primary-container' : 'bg-outline'}"></span>
+                Confidence: ${confidence.label} • ${formatScore(r.score)} Semantic Match
+              </span>
+            </div>
+            ${isDevanagari ? `
+              <div class="bg-surface-container-low p-space-md rounded text-center relative overflow-hidden">
+                <span class="absolute top-2 right-3 font-label-sm text-label-sm text-outline opacity-40 select-none">संहिता पाठ</span>
+                <p class="font-citation text-body-lg text-primary leading-loose tracking-wide font-headline-md">${escapeHtml(r.text)}</p>
+              </div>
+            ` : `
+              <div class="flex flex-col gap-space-xs">
+                <p class="font-body-md text-body-md text-on-surface leading-relaxed">${escapeHtml(r.text)}</p>
+              </div>
+            `}
+            <div class="flex flex-wrap items-center gap-space-xs pt-1">
+              <span class="px-space-sm py-0.5 bg-surface-container rounded text-on-surface font-label-sm text-label-sm">
+                Score: ${r.score.toFixed(4)}
+              </span>
+              ${r.chunk_id ? `<span class="px-space-sm py-0.5 bg-surface-container-high rounded text-on-surface-variant font-label-sm text-label-sm">${escapeHtml(r.chunk_id)}</span>` : ''}
+              ${r.chunk_type ? `<span class="px-space-sm py-0.5 bg-surface-container-high rounded text-on-surface-variant font-label-sm text-label-sm">${escapeHtml(r.chunk_type)}</span>` : ''}
+            </div>
+            <div class="pt-space-sm flex items-center gap-space-xs">
+              <button class="inline-flex items-center gap-1.5 px-space-sm py-1.5 bg-surface-container-high hover:bg-surface-variant rounded text-on-surface font-label-sm text-label-sm transition-colors" type="button" onclick="navigator.clipboard.writeText(${JSON.stringify(r.text || '')}); this.querySelector('span:last-child').textContent='Copied!';">
+                <span class="material-symbols-outlined text-[15px] text-tertiary">content_copy</span>
+                <span>Copy Text</span>
+              </button>
+            </div>
+          </article>
+        `;
+      });
+    }
+    html += '</section>';
+
+    // === Column B: Patent Overlaps ===
+    html += '<section class="flex flex-col gap-space-md animate-fadeInUp stagger-3">';
+    html += `
+      <div class="flex flex-col gap-1 pb-1">
+        <div class="flex items-center gap-space-xs">
+          <span class="material-symbols-outlined text-secondary text-[20px]">policy</span>
+          <h2 class="font-headline-sm text-headline-sm text-on-surface">Potential Patent Overlaps</h2>
+        </div>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">
+          Automated semantic matching against global patent index
+        </p>
+      </div>
+    `;
+
+    // Cautionary Banner
+    html += `
+      <div class="bg-surface-container-highest p-space-md rounded-lg flex items-start gap-space-sm">
+        <span class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5">info</span>
+        <div class="flex flex-col gap-0.5">
+          <span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Examiner Alert</span>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+            <span class="font-semibold text-on-surface">CAUTION:</span> These are research leads indicating thematic or botanical overlap, not definitive infringement or invalidity findings.
+          </p>
+        </div>
+      </div>
+    `;
+
+    if (patentResults.length === 0) {
+      html += `
+        <div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col items-center justify-center text-center gap-space-sm py-12">
+          <span class="material-symbols-outlined text-primary-fixed-dim text-[40px]">check_circle</span>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface">No Patent Overlaps Detected</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">The patent index search returned no significant overlap leads for this query.</p>
+        </div>
+      `;
+    } else {
+      patentResults.forEach((p, i) => {
+        const overlap = getOverlapLevel(p.score);
+        html += `
+          <article class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md relative overflow-hidden animate-fadeInUp stagger-${Math.min(i + 3, 5)}">
+            <div class="absolute top-0 left-0 bottom-0 w-1.5 ${p.score >= 0.5 ? 'bg-secondary-container' : 'bg-surface-container-highest'}"></div>
+            <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-xs pl-space-xs">
+              <div class="flex flex-col">
+                <div class="flex items-center gap-space-xs">
+                  <span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">${escapeHtml(p.publication_number || 'Unknown Patent')}</span>
+                </div>
+              </div>
+              <div class="flex flex-col items-start sm:items-end gap-1">
+                <span class="inline-flex items-center gap-1.5 px-space-sm py-1 ${overlap.color} rounded-full font-label-sm text-label-sm font-semibold">
+                  <span class="w-2 h-2 rounded-full ${overlap.dot}"></span>
+                  Review Lead: ${overlap.label}
+                </span>
+                <span class="text-[11px] text-on-surface-variant font-label-sm">Similarity Score: ${formatScore(p.score)}</span>
+              </div>
+            </div>
+            <div class="flex flex-col gap-space-xs bg-surface-container-low p-space-md rounded">
+              <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Patent Text Excerpt</span>
+              <p class="font-body-md text-body-md text-on-surface leading-relaxed">${escapeHtml(p.text)}</p>
+            </div>
+            <div class="pt-space-sm flex items-center gap-space-xs">
+              <button class="inline-flex items-center gap-1.5 px-space-sm py-1.5 bg-surface-container-high hover:bg-surface-variant rounded text-on-surface font-label-sm text-label-sm transition-colors" type="button" onclick="navigator.clipboard.writeText('${escapeHtml(p.publication_number || '')}'); this.querySelector('span:last-child').textContent='Copied!';">
+                <span class="material-symbols-outlined text-[16px]">content_copy</span>
+                <span>Copy Patent Number</span>
+              </button>
+            </div>
+          </article>
+        `;
+      });
+    }
+    html += '</section>';
+    html += '</div>'; // Close two-column grid
+
+    // === Quality Note ===
+    html += `
+      <div class="mt-space-lg bg-surface-container-low rounded-xl p-space-lg shadow-sm flex items-start gap-space-md animate-fadeInUp stagger-5">
+        <span class="inline-flex p-2 bg-secondary-fixed/50 text-secondary rounded shrink-0 mt-1">
+          <span class="material-symbols-outlined text-[24px]">verified</span>
+        </span>
+        <div class="flex flex-col">
+          <span class="font-label-lg text-label-lg font-bold text-primary mb-1">Quality &amp; Methodology Notice</span>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">${escapeHtml(data.quality_note)}</p>
+        </div>
+      </div>
+    `;
+
+    html += '</div>'; // Close wrapper
+
+    resultsContainer.innerHTML = html;
+
+    // Scroll to results
+    resultsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // ===== ERROR STATE =====
+  function renderError(errorMsg) {
+    benchmarksSection.classList.remove('hidden');
+    resultsContainer.innerHTML = `
+      <div class="bg-error-container rounded-lg p-space-lg flex items-start gap-space-md animate-fadeIn mb-space-lg">
+        <span class="material-symbols-outlined text-on-error-container text-[28px] shrink-0">error</span>
+        <div class="flex flex-col gap-space-xs">
+          <h3 class="font-headline-sm text-headline-sm text-on-error-container">Connection Error</h3>
+          <p class="font-body-md text-body-md text-on-error-container/80">
+            ${escapeHtml(errorMsg)}
+          </p>
+          <p class="font-body-sm text-body-sm text-on-error-container/60 mt-1">
+            Make sure the FastAPI backend is running: <code class="bg-on-error-container/10 px-1.5 py-0.5 rounded text-on-error-container">uvicorn api.main:app --reload --port 8000</code>
+          </p>
+          <p class="font-body-sm text-body-sm text-on-error-container/60">
+            And Docker services are up: <code class="bg-on-error-container/10 px-1.5 py-0.5 rounded text-on-error-container">docker compose up -d</code>
+          </p>
+        </div>
+      </div>
+    `;
+  }
+
+  // ===== QUERY HANDLER =====
+  async function handleQuery(query) {
+    if (isLoading || !query.trim()) return;
+
+    currentQuery = query.trim();
+    isLoading = true;
+
+    // Update button state
+    submitBtn.disabled = true;
+    submitText.textContent = 'Scanning Corpus...';
+    submitIcon.textContent = 'refresh';
+    submitIcon.classList.add('animate-spin');
+
+    // Show loading
+    renderLoadingState(currentQuery);
+
+    try {
+      const res = await fetch(QUERY_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: currentQuery }),
+      });
+
+      if (!res.ok) {
+        throw new Error(`API returned status ${res.status}: ${res.statusText}`);
+      }
+
+      const data = await res.json();
+      renderResults(data, currentQuery);
+    } catch (err) {
+      renderError(`Failed to reach the API at ${QUERY_ENDPOINT}. Error: ${err.message}`);
+    } finally {
+      isLoading = false;
+      submitBtn.disabled = false;
+      submitText.textContent = 'Run Research Query';
+      submitIcon.textContent = 'arrow_forward';
+      submitIcon.classList.remove('animate-spin');
+    }
+  }
+
+  // ===== FORM SUBMISSION =====
+  queryForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const query = queryInput.value.trim();
+    if (query) handleQuery(query);
+  });
+
+  // ===== EXPORT FUNCTIONALITY =====
+  exportBtn.addEventListener('click', () => {
+    if (!lastResponse) return;
+    const blob = new Blob([JSON.stringify(lastResponse, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `ip-sakti-report-${sessionId}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+
+  // ===== KEYBOARD SHORTCUT =====
+  document.addEventListener('keydown', (e) => {
+    // Cmd/Ctrl + K to focus search
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      navigateTo('overview');
+      queryInput.focus();
+      queryInput.select();
+    }
+  });
+
+})();
+</script>
+</body>
+</html>
