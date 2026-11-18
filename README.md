@@ -66,7 +66,7 @@ There are 52 queries: 36 that should match and 16 off-topic ones that should be 
 
 - **Ingestion:** Python, BeautifulSoup (HTML parsing), Google BigQuery (patents)
 - **Entity bridge:** curated regex lexicon (`lexicon/`) with tests for each false friend
-- **Embeddings:** `sentence-transformers`, using `BAAI/bge-small-en-v1.5` for v2. `paraphrase-multilingual-MiniLM-L12-v2` is kept as the v1 baseline.
+- **Embeddings:** `BAAI/bge-small-en-v1.5` for v2, served through ONNX (`fastembed`). It gives the same vectors as `sentence-transformers` (cosine 1.0000) at a fraction of the memory. `paraphrase-multilingual-MiniLM-L12-v2` (PyTorch) is kept as the offline v1 baseline.
 - **Vector store:** Qdrant: Cloud, embedded local storage, or Docker
 - **API:** FastAPI + Uvicorn
 - **Frontend:** plain HTML/CSS/JS with no build step
@@ -120,8 +120,14 @@ You can also open `frontend\index.html` directly in a browser.
 .\.venv\Scripts\python eval\run_eval.py --calibrate --verbose
 ```
 
-### Deploy (optional)
-The `Dockerfile` builds an image containing only the API and lexicon, with the embedding model built in. Point `QDRANT_URL` at a cluster that already holds the `*_v2` collections.
+### Deploy (Render, free)
+The `Dockerfile` builds one image that serves both the API and the website, with the ONNX model built in and no PyTorch. Locally it peaks at about 340 MB of RAM, under Render's 512 MB free tier.
+
+1. Open https://dashboard.render.com/blueprint/new?repo=https://github.com/shivansh-arch/IP-Sakti. `render.yaml` defines the service.
+2. Enter `QDRANT_URL` and `QDRANT_API_KEY` when Render asks. They point at a Qdrant cluster that already holds the `*_v2` collections.
+3. Render builds and deploys, and redeploys on every push to `Main`. Free instances sleep after 15 minutes idle and take about a minute to wake.
+
+The same image also runs on a Hugging Face Docker Space (`deploy/push_space.py`), but those now need an HF PRO plan.
 
 ### Optional: English gloss from a free LLM
 `ingestion/eda_agent/pipeline/enrich_chunks.py` adds a one-sentence gloss to each passage, using Ollama locally or the Gemini free tier. It is resumable. Local `llama3.2:3b` **hallucinated** on romanised Sanskrit in testing, so v2 ships lexicon-only. If you use it, use a stronger model and spot-check the output. Any gloss is appended after the lexicon description and never replaces it.
@@ -136,7 +142,7 @@ This section is here on purpose. Treat it as part of the project, not a footnote
 - **Evaluation is lexicon-judged.** See the caveat above. The numbers show entity retrieval, not verified prior art.
 - **Small patent sample (82 records).** Strict filtering (India jurisdiction, CPC `A61K36`, English abstract present) leaves a small set; most India-origin patents in this dataset have no English abstract. Only 13 of the 82 mention a plant from Charaka, so for most of them the correct answer is no traditional-knowledge overlap. A global pull would suit the use case better, at higher BigQuery cost.
 - **Verse–commentary join is incomplete.** Only about 12.6% of NIIMH chunks are verse+commentary pairs. The join matches exact `unit_id` only, so commentary spanning a verse range isn't linked.
-- **Not deployed.** There's a Docker image, but no hosting, auth or multi-tenancy.
+- **Free-tier hosting.** The Render deployment sleeps when idle and has no auth or rate limiting.
 
 ## Repository map
 
