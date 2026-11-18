@@ -181,7 +181,7 @@
       "id": "cognition",
       "name": "Memory / cognition (medhya)",
       "sa": [
-        "medhy"
+        "(?<!a)medhy"
       ],
       "en": [
         "memory",
@@ -478,8 +478,7 @@
         "netraro",
         "netry",
         "cakShuShy",
-        "timir",
-        "abhiShyand"
+        "timir"
       ],
       "en": [
         "ophthalm",
