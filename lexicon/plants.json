@@ -226,7 +226,7 @@
       "name": "Sweet flag",
       "botanical": "Acorus calamus",
       "sa": [
-        "vacA"
+        "(?<![tA])(?<!ava)vacA(?!r)"
       ],
       "en": [
         "acorus calamus",
