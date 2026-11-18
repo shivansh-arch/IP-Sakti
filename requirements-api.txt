@@ -1,0 +1,5 @@
+fastapi
+uvicorn[standard]
+pydantic
+sentence-transformers
+qdrant-client
