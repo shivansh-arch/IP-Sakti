@@ -18,6 +18,7 @@ tk_evidence, ...).
 
 import json
 import os
+from functools import lru_cache
 from pathlib import Path
 
 from fastapi import FastAPI
@@ -25,6 +26,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 from api import search
+from lexicon import CONDITIONS, PLANTS
 
 ENGINE = os.environ.get("RETRIEVAL_ENGINE", "v2")
 TOP_K = 5
@@ -137,6 +139,24 @@ def query(request: QueryRequest):
             "Sanskrit text is the evidence; English views are machine-generated aids."
         ),
     }
+
+
+@lru_cache(maxsize=1)
+def _stats() -> dict:
+    c = search.get_client()
+    return {
+        "niimh_passages_indexed": c.count(search.V2_NIIMH).count,
+        "patents_indexed": c.count(search.V2_PATENTS).count,
+        "lexicon_plants": len(PLANTS),
+        "lexicon_conditions": len(CONDITIONS),
+        "embedding_model": search.V2_MODEL,
+        "niimh_threshold": search.V2_NIIMH_THRESHOLD,
+    }
+
+
+@app.get("/stats")
+def stats():
+    return _stats()
 
 
 @app.get("/health")
