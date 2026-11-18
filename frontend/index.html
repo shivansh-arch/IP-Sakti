@@ -230,8 +230,12 @@ footer p { margin: 0 0 6px; max-width: 90ch; }
 (function () {
   "use strict";
 
-  // Override by defining window.IPSAKTI_API before this script (e.g. for a deployed API).
-  var API = (window.IPSAKTI_API || "http://localhost:8000").replace(/\/$/, "");
+  // Where the API lives:
+  //  - window.IPSAKTI_API if defined before this script (separate API host);
+  //  - same origin when the API serves this page (Docker image / HF Space, or uvicorn on :8000);
+  //  - otherwise the local dev API (page opened from disk or `http.server 3000`).
+  var sameOrigin = /^https?:$/.test(location.protocol) && location.port !== "3000";
+  var API = (window.IPSAKTI_API || (sameOrigin ? location.origin : "http://localhost:8000")).replace(/\/$/, "");
   var $ = function (id) { return document.getElementById(id); };
   var form = $("form"), input = $("q"), go = $("go"), results = $("results"), intro = $("intro");
   var last = null, busy = false, statsLoaded = false;

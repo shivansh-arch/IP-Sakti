@@ -23,6 +23,7 @@ from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from api import search
@@ -162,3 +163,11 @@ def stats():
 @app.get("/health")
 def health():
     return {"status": "ok", "engine": ENGINE}
+
+
+# Serve the single-page frontend from the same origin when it ships alongside
+# the API (the Docker image / Hugging Face Space). Mounted LAST so the API
+# routes above take precedence over the catch-all static mount.
+_FRONTEND = Path(__file__).resolve().parent.parent / "frontend"
+if (_FRONTEND / "index.html").is_file():
+    app.mount("/", StaticFiles(directory=_FRONTEND, html=True), name="frontend")
