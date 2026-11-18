@@ -79,3 +79,14 @@ def test_entity_overlap_weights():
     score, shared = entity_overlap(q, Tags(plants=["neem"]))
     assert score == 0 and shared == {"plants": [], "conditions": []}
 
+
+@pytest.mark.parametrize("text, wrong", [
+    ("kShitakamalashIlA", "water_lily"),          # a personal name
+    ("vedaM pradarshayan", "gynecological"),      # 'showing'
+    ("amedhyaM", "cognition"),                    # 'impure'
+    ("abhiShyandi bhojanam", "eye"),              # channel-blocking food quality
+    ("durbalAtivishuShka", "bala"),               # 'weak'
+])
+def test_more_false_friends(text, wrong):
+    t = tag(text, "sa")
+    assert wrong not in t.plants + t.conditions
