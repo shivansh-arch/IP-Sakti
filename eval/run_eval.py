@@ -108,6 +108,7 @@ def patent_evidence(system: str) -> dict:
 
 
 def main():
+    sys.stdout.reconfigure(encoding="utf-8")  # Windows consoles default to cp1252
     verbose = "--verbose" in sys.argv
     with open(CASES, encoding="utf-8") as f:
         cases = json.load(f)["niimh_queries"]
