@@ -866,7 +866,7 @@
       "name": "Bala",
       "botanical": "Sida cordifolia",
       "sa": [
-        "balA(?:mUl|tail|kv|kalk|ghRut|ti)"
+        "(?<![rU])balA(?:mUl|tail|kv|kalk|ghRut|ti)"
       ],
       "en": [
         "sida cordifolia"
