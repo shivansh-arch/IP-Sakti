@@ -56,7 +56,7 @@ def _citation(p: dict) -> dict | None:
         return None
     unit = str(p.get("unit_id") or "")
     verse = unit if unit and not unit.startswith(("unmarked", "colophon")) else None
-    label = f"{ch['sthana_name']} {ch['adhyaya']}" + (f".{verse}" if verse else "")
+    label = f"{ch['sthana_name']} {ch['adhyaya'] or ''}".strip() + (f".{verse}" if verse and ch["adhyaya"] else (f", v. {verse}" if verse else ""))
     return {**ch, "verse": verse, "label": label}
 
 
