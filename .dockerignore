@@ -6,7 +6,10 @@ scratch/
 notebooks/
 tests/
 eval/
-runtime/
+qdrant_local/
+notes/
+ingestion/
+.pytest_cache/
 frontend/
 .git/
 .gitignore
