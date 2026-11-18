@@ -16,7 +16,9 @@ is still present; v2 only ADDS fields (query_entities, matched, english_view,
 tk_evidence, ...).
 """
 
+import json
 import os
+from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -43,9 +45,25 @@ class QueryRequest(BaseModel):
     query: str = Field(min_length=1, max_length=2000)
 
 
+# adhyaya_val -> {sthana, sthana_name, adhyaya, title}, built from the NIIMH
+# chapter map so verses can be cited as e.g. "Cikitsasthana 7.142".
+_CHAPTERS = json.loads((Path(__file__).parent / "chapters.json").read_text(encoding="utf-8"))
+
+
+def _citation(p: dict) -> dict | None:
+    ch = _CHAPTERS.get(str(p.get("chapter")))
+    if not ch or ch["sthana"] != str(p.get("book")):
+        return None
+    unit = str(p.get("unit_id") or "")
+    verse = unit if unit and not unit.startswith(("unmarked", "colophon")) else None
+    label = f"{ch['sthana_name']} {ch['adhyaya']}" + (f".{verse}" if verse else "")
+    return {**ch, "verse": verse, "label": label}
+
+
 def _chunk(r: dict) -> dict:
     p = r["payload"]
     return {
+        "citation": _citation(p),
         "score": r["score"],
         "dense_score": r["dense"],
         "entity_score": r["entity"],
