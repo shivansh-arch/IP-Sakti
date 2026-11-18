@@ -1,8 +1,16 @@
-# IP-SAKTI API — deployment image for Render (or any Docker host)
+# IP-SAKTI — API + frontend in one image.
+# Runs on Hugging Face Spaces (Docker SDK, port 7860) or any Docker host
+# such as Render ($PORT is honoured). Vectors live in Qdrant Cloud: set
+# QDRANT_URL and QDRANT_API_KEY as secrets on the host.
 
 FROM python:3.10-slim
 
 WORKDIR /app
+
+# CPU-only PyTorch first: the default Linux wheel bundles CUDA (~2 GB) that
+# a CPU host never uses. sentence-transformers then reuses this install.
+RUN pip install --no-cache-dir --default-timeout=120 --retries 5 \
+        torch --index-url https://download.pytorch.org/whl/cpu
 
 # Install dependencies first (layer caching — only reinstalls if this file changes).
 # Uses a MINIMAL requirements file (just what the API imports), not the full dev
@@ -11,17 +19,23 @@ COPY requirements-api.txt .
 RUN pip install --no-cache-dir --default-timeout=120 --retries 5 -r requirements-api.txt
 
 # Bake the v2 embedding model into the image so cold starts don't download it.
-RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('BAAI/bge-small-en-v1.5')"
+# HF_HOME is outside /root so the non-root user Spaces runs as (uid 1000) can read it.
+ENV HF_HOME=/app/.cache/huggingface
+RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('BAAI/bge-small-en-v1.5')" \
+    && chmod -R a+rX /app/.cache
 ENV HF_HUB_OFFLINE=1
 
-# Copy only what the API needs to run — not the full repo (data, scripts, etc.)
-# The API reads vectors from Qdrant Cloud: set QDRANT_URL / QDRANT_API_KEY on the host.
+# Copy only what the app needs to run — not the full repo (data, scripts, etc.)
 COPY lexicon/ ./lexicon/
 COPY api/ ./api/
+COPY frontend/index.html ./frontend/index.html
 
-EXPOSE 8000
+# Spaces run the container as uid 1000; make sure it can read everything.
+RUN useradd -m -u 1000 user 2>/dev/null || true
+USER 1000
 
-# Render injects $PORT at runtime — must bind to it, not a hardcoded port.
-# JSON/exec form with explicit shell invocation: keeps $PORT expansion working
-# while still getting proper signal handling (fixes Docker's lint warning).
-CMD ["sh", "-c", "uvicorn api.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
+EXPOSE 7860
+
+# Spaces route to app_port (7860); Render injects $PORT. Shell form keeps
+# $PORT expansion while exec-ing uvicorn for proper signal handling.
+CMD ["sh", "-c", "exec uvicorn api.main:app --host 0.0.0.0 --port ${PORT:-7860}"]

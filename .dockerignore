@@ -10,7 +10,7 @@ qdrant_local/
 notes/
 ingestion/
 .pytest_cache/
-frontend/
+frontend/stitch-screens/
 .git/
 .gitignore
 __pycache__/
