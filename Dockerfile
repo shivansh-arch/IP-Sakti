@@ -10,7 +10,13 @@ WORKDIR /app
 COPY requirements-api.txt .
 RUN pip install --no-cache-dir --default-timeout=120 --retries 5 -r requirements-api.txt
 
+# Bake the v2 embedding model into the image so cold starts don't download it.
+RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('BAAI/bge-small-en-v1.5')"
+ENV HF_HUB_OFFLINE=1
+
 # Copy only what the API needs to run — not the full repo (data, scripts, etc.)
+# The API reads vectors from Qdrant Cloud: set QDRANT_URL / QDRANT_API_KEY on the host.
+COPY lexicon/ ./lexicon/
 COPY api/ ./api/
 
 EXPOSE 8000
