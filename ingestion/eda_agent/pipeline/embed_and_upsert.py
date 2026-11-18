@@ -6,6 +6,7 @@ upserts into Qdrant. Payload carries full chunk metadata — no Postgres
 dependency for v1.
 """
 
+import os
 import json
 import hashlib
 
@@ -17,6 +18,9 @@ IN_FILE = "data/processed/chunks.jsonl"
 COLLECTION_NAME = "ip_sakti_niimh"
 MODEL_NAME = "paraphrase-multilingual-MiniLM-L12-v2"
 BATCH_SIZE = 64
+
+QDRANT_URL = os.environ.get("QDRANT_URL")
+QDRANT_API_KEY = os.environ.get("QDRANT_API_KEY")
 
 
 def stable_id(chunk_id: str) -> int:
@@ -37,7 +41,10 @@ def main():
             chunks.append(json.loads(line))
     print(f"Loaded {len(chunks)} chunks")
 
-    client = QdrantClient(host="localhost", port=6333)
+    if QDRANT_URL:
+        client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY, check_compatibility=False)
+    else:
+        client = QdrantClient(host="localhost", port=6333, check_compatibility=False)
 
     # Recreate collection fresh each run — fine for v1 iteration.
     client.recreate_collection(

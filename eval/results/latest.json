@@ -1,0 +1,50 @@
+{
+  "v1": {
+    "threshold": 0.3,
+    "dev": {
+      "answer_acc": 0.111,
+      "p@5": 0.056,
+      "false_abst": 0.111,
+      "neg_abst": 0.625,
+      "overall": 0.269,
+      "n": 26
+    },
+    "test": {
+      "answer_acc": 0.056,
+      "p@5": 0.022,
+      "false_abst": 0.056,
+      "neg_abst": 0.5,
+      "overall": 0.192,
+      "n": 26
+    },
+    "patent_evidence": {
+      "patents_with_plants": 13,
+      "top1_shares_plant": 0,
+      "rate": 0.0
+    }
+  },
+  "v2": {
+    "threshold": 0.59,
+    "dev": {
+      "answer_acc": 0.944,
+      "p@5": 0.911,
+      "false_abst": 0.0,
+      "neg_abst": 1.0,
+      "overall": 0.962,
+      "n": 26
+    },
+    "test": {
+      "answer_acc": 0.944,
+      "p@5": 0.811,
+      "false_abst": 0.0,
+      "neg_abst": 1.0,
+      "overall": 0.962,
+      "n": 26
+    },
+    "patent_evidence": {
+      "patents_with_plants": 13,
+      "top1_shares_plant": 10,
+      "rate": 0.769
+    }
+  }
+}

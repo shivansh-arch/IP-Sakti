@@ -6,6 +6,7 @@ collection (ip_sakti_patents) from the NIIMH one — keeps sources distinct
 so later cross-source overlap comparison is explicit, not tangled.
 """
 
+import os
 import json
 import hashlib
 
@@ -16,6 +17,9 @@ from qdrant_client.models import Distance, VectorParams, PointStruct
 IN_FILE = "data/raw/patents/india_a61k36_patents.json"
 COLLECTION_NAME = "ip_sakti_patents"
 MODEL_NAME = "paraphrase-multilingual-MiniLM-L12-v2"  # same model as NIIMH — required for comparable vector space
+
+QDRANT_URL = os.environ.get("QDRANT_URL")
+QDRANT_API_KEY = os.environ.get("QDRANT_API_KEY")
 
 
 def stable_id(publication_number: str) -> int:
@@ -46,7 +50,10 @@ def main():
         })
     print(f"{len(chunks)} chunks with usable text")
 
-    client = QdrantClient(host="localhost", port=6333, check_compatibility=False)
+    if QDRANT_URL:
+        client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY, check_compatibility=False)
+    else:
+        client = QdrantClient(host="localhost", port=6333, check_compatibility=False)
     client.recreate_collection(
         collection_name=COLLECTION_NAME,
         vectors_config=VectorParams(size=vector_size, distance=Distance.COSINE),

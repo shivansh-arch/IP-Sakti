@@ -1,0 +1,758 @@
+{
+ "1": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "1",
+  "title": "दीर्घञ्जीवितीयोऽध्यायः"
+ },
+ "2": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "2",
+  "title": "अपामार्गतण्डुलीयोऽध्यायः"
+ },
+ "3": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "3",
+  "title": "आरग्वधीयोऽध्यायः"
+ },
+ "4": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "4",
+  "title": "षड्विरेचनशताश्रितीयोऽध्यायः"
+ },
+ "5": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "5",
+  "title": "मात्राशितीयोऽध्यायः"
+ },
+ "6": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "6",
+  "title": "तस्याशितीयोऽध्यायः"
+ },
+ "7": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "7",
+  "title": "नवेगान्धारणीयोऽध्यायः"
+ },
+ "8": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "8",
+  "title": "इन्द्रियोपक्रमणीयोऽध्यायः"
+ },
+ "9": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "9",
+  "title": "खुड्डाकचतुष्पादोऽध्यायः"
+ },
+ "10": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "10",
+  "title": "महाचतुष्पादोऽध्यायः"
+ },
+ "11": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "11",
+  "title": "तिस्रैषणीयोऽध्यायः"
+ },
+ "12": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "12",
+  "title": "वातकलाकलीयोऽध्यायः"
+ },
+ "13": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "13",
+  "title": "स्नेहाध्यायः"
+ },
+ "14": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "14",
+  "title": "स्वेदाध्यायः"
+ },
+ "15": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "15",
+  "title": "उपकल्पनीयोऽध्यायः"
+ },
+ "16": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "16",
+  "title": "चिकित्साप्राभृतीयोऽध्यायः"
+ },
+ "17": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "17",
+  "title": "कियन्तःशिरसीयोऽध्यायः"
+ },
+ "18": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "18",
+  "title": "त्रिशोथीयोऽध्यायः"
+ },
+ "19": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "19",
+  "title": "अष्टोदरीयोऽध्यायः"
+ },
+ "20": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "20",
+  "title": "महारोगाध्यायः"
+ },
+ "21": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "21",
+  "title": "अष्टौनिन्दितीयोऽध्यायः"
+ },
+ "22": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "22",
+  "title": "लङ्घनबृंहणीयोऽध्यायः"
+ },
+ "23": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "23",
+  "title": "सन्तर्पणीयोऽध्यायः"
+ },
+ "24": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "24",
+  "title": "विधिशोणितीयोऽध्यायः"
+ },
+ "25": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "25",
+  "title": "यज्जःपुरुषीयोऽध्यायः"
+ },
+ "26": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "26",
+  "title": "आत्रेयभद्रकाप्यीयोऽध्यायः"
+ },
+ "27": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "27",
+  "title": "अन्नपानविध्यध्यायः"
+ },
+ "28": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "28",
+  "title": "विविधाशितपीतीयोऽध्यायः"
+ },
+ "29": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "29",
+  "title": "दशप्राणायतनीयोऽध्यायः"
+ },
+ "30": {
+  "sthana": "1",
+  "sthana_name": "Sūtrasthāna",
+  "adhyaya": "30",
+  "title": "अर्थेदशमहामूलीयोऽध्यायः"
+ },
+ "31": {
+  "sthana": "2",
+  "sthana_name": "Nidānasthāna",
+  "adhyaya": "1",
+  "title": "ज्वरनिदानम्"
+ },
+ "32": {
+  "sthana": "2",
+  "sthana_name": "Nidānasthāna",
+  "adhyaya": "2",
+  "title": "रक्तपित्तनिदानम्"
+ },
+ "33": {
+  "sthana": "2",
+  "sthana_name": "Nidānasthāna",
+  "adhyaya": "3",
+  "title": "गुल्मनिदानम्"
+ },
+ "34": {
+  "sthana": "2",
+  "sthana_name": "Nidānasthāna",
+  "adhyaya": "4",
+  "title": "प्रमेहनिदानम्"
+ },
+ "35": {
+  "sthana": "2",
+  "sthana_name": "Nidānasthāna",
+  "adhyaya": "5",
+  "title": "कुष्ठनिदानम्"
+ },
+ "36": {
+  "sthana": "2",
+  "sthana_name": "Nidānasthāna",
+  "adhyaya": "6",
+  "title": "शोषनिदानम्"
+ },
+ "37": {
+  "sthana": "2",
+  "sthana_name": "Nidānasthāna",
+  "adhyaya": "7",
+  "title": "उन्मादनिदानम्"
+ },
+ "38": {
+  "sthana": "2",
+  "sthana_name": "Nidānasthāna",
+  "adhyaya": "8",
+  "title": "अपस्मारनिदानम्"
+ },
+ "39": {
+  "sthana": "3",
+  "sthana_name": "Vimānasthāna",
+  "adhyaya": "1",
+  "title": "रसविमानम्"
+ },
+ "40": {
+  "sthana": "3",
+  "sthana_name": "Vimānasthāna",
+  "adhyaya": "2",
+  "title": "त्रिविधकुक्षीयविमानम्"
+ },
+ "41": {
+  "sthana": "3",
+  "sthana_name": "Vimānasthāna",
+  "adhyaya": "3",
+  "title": "जनपदोद्ध्वंसनीयविमानम्"
+ },
+ "42": {
+  "sthana": "3",
+  "sthana_name": "Vimānasthāna",
+  "adhyaya": "4",
+  "title": "त्रिविधरोगविशेषविज्ञानीयविमानम्"
+ },
+ "43": {
+  "sthana": "3",
+  "sthana_name": "Vimānasthāna",
+  "adhyaya": "5",
+  "title": "स्रोतोविमानम्"
+ },
+ "44": {
+  "sthana": "3",
+  "sthana_name": "Vimānasthāna",
+  "adhyaya": "6",
+  "title": "रोगानीकविमानम्"
+ },
+ "45": {
+  "sthana": "3",
+  "sthana_name": "Vimānasthāna",
+  "adhyaya": "7",
+  "title": "व्याधितरूपीयविमानम्"
+ },
+ "46": {
+  "sthana": "3",
+  "sthana_name": "Vimānasthāna",
+  "adhyaya": "8",
+  "title": "रोगभिषग्जितीयविमानम्"
+ },
+ "47": {
+  "sthana": "4",
+  "sthana_name": "Śārīrasthāna",
+  "adhyaya": "1",
+  "title": "कतिधापुरुषीयशारीरम्"
+ },
+ "48": {
+  "sthana": "4",
+  "sthana_name": "Śārīrasthāna",
+  "adhyaya": "2",
+  "title": "अतुल्यगोत्रीयशारीरम्"
+ },
+ "49": {
+  "sthana": "4",
+  "sthana_name": "Śārīrasthāna",
+  "adhyaya": "3",
+  "title": "खुड्डिकागर्भावक्रान्तिशारीरम्"
+ },
+ "50": {
+  "sthana": "4",
+  "sthana_name": "Śārīrasthāna",
+  "adhyaya": "4",
+  "title": "महतीगर्भावक्रान्तिशारीरम्"
+ },
+ "51": {
+  "sthana": "4",
+  "sthana_name": "Śārīrasthāna",
+  "adhyaya": "5",
+  "title": "पुरुषविचयशारीरम्"
+ },
+ "52": {
+  "sthana": "4",
+  "sthana_name": "Śārīrasthāna",
+  "adhyaya": "6",
+  "title": "शरीरविचयशारीरम्"
+ },
+ "53": {
+  "sthana": "4",
+  "sthana_name": "Śārīrasthāna",
+  "adhyaya": "7",
+  "title": "शरीरसङ्ख्याशारीरम्"
+ },
+ "54": {
+  "sthana": "4",
+  "sthana_name": "Śārīrasthāna",
+  "adhyaya": "8",
+  "title": "जातिसूत्रीयशारीरम्"
+ },
+ "55": {
+  "sthana": "5",
+  "sthana_name": "Indriyasthāna",
+  "adhyaya": "1",
+  "title": "वर्णस्वरीयमिन्द्रियम्"
+ },
+ "56": {
+  "sthana": "5",
+  "sthana_name": "Indriyasthāna",
+  "adhyaya": "2",
+  "title": "पुष्पितकमिन्द्रियम्"
+ },
+ "57": {
+  "sthana": "5",
+  "sthana_name": "Indriyasthāna",
+  "adhyaya": "3",
+  "title": "परिमर्शनीयमिन्द्रियम्"
+ },
+ "58": {
+  "sthana": "5",
+  "sthana_name": "Indriyasthāna",
+  "adhyaya": "4",
+  "title": "इन्द्रियानीकमिन्द्रियम्"
+ },
+ "59": {
+  "sthana": "5",
+  "sthana_name": "Indriyasthāna",
+  "adhyaya": "5",
+  "title": "पूर्वरूपीयमिन्द्रियम्"
+ },
+ "60": {
+  "sthana": "5",
+  "sthana_name": "Indriyasthāna",
+  "adhyaya": "6",
+  "title": "कतमानिशरीरीयमिन्द्रियम्"
+ },
+ "61": {
+  "sthana": "5",
+  "sthana_name": "Indriyasthāna",
+  "adhyaya": "7",
+  "title": "पन्नरूपीयमिन्द्रियम्"
+ },
+ "62": {
+  "sthana": "5",
+  "sthana_name": "Indriyasthāna",
+  "adhyaya": "8",
+  "title": "अवाक्शिरसीयमिन्द्रियम्"
+ },
+ "63": {
+  "sthana": "5",
+  "sthana_name": "Indriyasthāna",
+  "adhyaya": "9",
+  "title": "यस्यश्यावनिमित्तीयमिन्द्रियम्"
+ },
+ "64": {
+  "sthana": "5",
+  "sthana_name": "Indriyasthāna",
+  "adhyaya": "10",
+  "title": "सद्योमरणीयमिन्द्रियम्"
+ },
+ "65": {
+  "sthana": "5",
+  "sthana_name": "Indriyasthāna",
+  "adhyaya": "11",
+  "title": "अणुज्योतीयमिन्द्रियम्"
+ },
+ "66": {
+  "sthana": "5",
+  "sthana_name": "Indriyasthāna",
+  "adhyaya": "12",
+  "title": "गोमयचूर्णीयमिन्द्रियम्"
+ },
+ "121": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "1.1",
+  "title": "रसायनाध्यायः - अभयामलकीयरसायनपादः"
+ },
+ "122": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "1.2",
+  "title": "रसायनाध्यायः - प्राणकामीयो रसायनपादः"
+ },
+ "123": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "1.3",
+  "title": "रसायनाध्यायः - करप्रचितीयो रसायनपादः"
+ },
+ "124": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "1.4",
+  "title": "रसायनाध्यायः - आयुर्वेदसमुत्थानीयो रसायनपादः"
+ },
+ "125": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "2.1",
+  "title": "वाजीकरणाऽध्यायः - संयोगशरमूलीयो वाजीकरणपादः"
+ },
+ "126": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "2.2",
+  "title": "वाजीकरणाऽध्यायः - आसिक्तक्षीरीयो वाजीकरणपादः"
+ },
+ "127": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "2.3",
+  "title": "वाजीकरणाऽध्यायः - माषपर्णभृतीयो वाजीकरणपादः"
+ },
+ "128": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "2.4",
+  "title": "वाजीकरणाऽध्यायः - पुमाञ्जातबलादिको वाजीकरणपादः"
+ },
+ "69": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "3",
+  "title": "ज्वरचिकित्सितम्"
+ },
+ "70": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "4",
+  "title": "रक्तपित्तचिकित्सितम्"
+ },
+ "71": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "5",
+  "title": "गुल्मचिकित्सितम्"
+ },
+ "72": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "6",
+  "title": "प्रमेहचिकित्सितम्"
+ },
+ "73": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "7",
+  "title": "कुष्ठचिकित्सितम्"
+ },
+ "74": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "8",
+  "title": "राजयक्ष्मचिकित्सितम्"
+ },
+ "75": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "9",
+  "title": "उन्मादचिकित्सितम्"
+ },
+ "76": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "10",
+  "title": "अपस्मारचिकित्सितम्"
+ },
+ "77": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "11",
+  "title": "क्षतक्षीणचिकित्सितम्"
+ },
+ "78": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "12",
+  "title": "श्वयथुचिकित्सितम्"
+ },
+ "79": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "13",
+  "title": "उदरचिकित्सितम्"
+ },
+ "80": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "14",
+  "title": "अर्शश्चिकित्सितम्"
+ },
+ "81": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "15",
+  "title": "ग्रहणीदोषचिकित्सितम्"
+ },
+ "82": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "16",
+  "title": "पाण्डुरोगचिकित्सितम्"
+ },
+ "83": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "17",
+  "title": "हिक्काश्वासचिकित्सितम्"
+ },
+ "84": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "18",
+  "title": "कासचिकित्सितम्"
+ },
+ "85": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "19",
+  "title": "अतिसारचिकित्सितम्"
+ },
+ "86": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "20",
+  "title": "छर्दिचिकित्सितम्"
+ },
+ "87": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "21",
+  "title": "विसर्पचिकित्सितम्"
+ },
+ "88": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "22",
+  "title": "तृष्णाचिकित्सितम्"
+ },
+ "89": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "23",
+  "title": "विषचिकित्सितम्"
+ },
+ "90": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "24",
+  "title": "मदात्ययचिकित्सितम्"
+ },
+ "91": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "25",
+  "title": "द्विव्रणीयचिकित्सितम्"
+ },
+ "92": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "26",
+  "title": "त्रिमर्मीयचिकित्सितम्"
+ },
+ "93": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "27",
+  "title": "ऊरुस्तम्भचिकित्सितम्"
+ },
+ "94": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "28",
+  "title": "वातव्याधिचिकित्सितम्"
+ },
+ "95": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "29",
+  "title": "वातशोणितचिकित्सितम्"
+ },
+ "96": {
+  "sthana": "6",
+  "sthana_name": "Cikitsāsthāna",
+  "adhyaya": "30",
+  "title": "योनिव्यापच्चिकित्सितम्"
+ },
+ "97": {
+  "sthana": "7",
+  "sthana_name": "Kalpasthāna",
+  "adhyaya": "1",
+  "title": "मदनकल्पः"
+ },
+ "98": {
+  "sthana": "7",
+  "sthana_name": "Kalpasthāna",
+  "adhyaya": "2",
+  "title": "जीमूतककल्पः"
+ },
+ "99": {
+  "sthana": "7",
+  "sthana_name": "Kalpasthāna",
+  "adhyaya": "3",
+  "title": "इक्ष्वाकुकल्पः"
+ },
+ "100": {
+  "sthana": "7",
+  "sthana_name": "Kalpasthāna",
+  "adhyaya": "4",
+  "title": "धामार्गवकल्पः"
+ },
+ "101": {
+  "sthana": "7",
+  "sthana_name": "Kalpasthāna",
+  "adhyaya": "5",
+  "title": "वत्सककल्पः"
+ },
+ "102": {
+  "sthana": "7",
+  "sthana_name": "Kalpasthāna",
+  "adhyaya": "6",
+  "title": "कृतवेधनकल्पः"
+ },
+ "103": {
+  "sthana": "7",
+  "sthana_name": "Kalpasthāna",
+  "adhyaya": "7",
+  "title": "श्यामात्रिवृत्कल्पः"
+ },
+ "104": {
+  "sthana": "7",
+  "sthana_name": "Kalpasthāna",
+  "adhyaya": "8",
+  "title": "चतुरङ्गुलकल्पः"
+ },
+ "105": {
+  "sthana": "7",
+  "sthana_name": "Kalpasthāna",
+  "adhyaya": "9",
+  "title": "तिल्वककल्पः"
+ },
+ "106": {
+  "sthana": "7",
+  "sthana_name": "Kalpasthāna",
+  "adhyaya": "10",
+  "title": "सुधाकल्पः"
+ },
+ "107": {
+  "sthana": "7",
+  "sthana_name": "Kalpasthāna",
+  "adhyaya": "11",
+  "title": "सप्तलाशङ्खिनीकल्पः"
+ },
+ "108": {
+  "sthana": "7",
+  "sthana_name": "Kalpasthāna",
+  "adhyaya": "12",
+  "title": "दन्तीद्रवन्तीकल्पः"
+ },
+ "109": {
+  "sthana": "8",
+  "sthana_name": "Siddhisthāna",
+  "adhyaya": "1",
+  "title": "कल्पनासिद्धिः"
+ },
+ "110": {
+  "sthana": "8",
+  "sthana_name": "Siddhisthāna",
+  "adhyaya": "2",
+  "title": "पञ्चकर्मीया सिद्धिः"
+ },
+ "111": {
+  "sthana": "8",
+  "sthana_name": "Siddhisthāna",
+  "adhyaya": "3",
+  "title": "बस्तिसूत्रीया सिद्धिः"
+ },
+ "112": {
+  "sthana": "8",
+  "sthana_name": "Siddhisthāna",
+  "adhyaya": "4",
+  "title": "स्नेहव्यापत्सिद्धिः"
+ },
+ "113": {
+  "sthana": "8",
+  "sthana_name": "Siddhisthāna",
+  "adhyaya": "5",
+  "title": "नेत्रबस्तिव्यापत्सिद्धिः"
+ },
+ "114": {
+  "sthana": "8",
+  "sthana_name": "Siddhisthāna",
+  "adhyaya": "6",
+  "title": "वमनविरेचनव्यापत्सिद्धिः"
+ },
+ "115": {
+  "sthana": "8",
+  "sthana_name": "Siddhisthāna",
+  "adhyaya": "7",
+  "title": "बस्तिव्यापत्सिद्धिः"
+ },
+ "116": {
+  "sthana": "8",
+  "sthana_name": "Siddhisthāna",
+  "adhyaya": "8",
+  "title": "प्रासृतयोगीया सिद्धिः"
+ },
+ "117": {
+  "sthana": "8",
+  "sthana_name": "Siddhisthāna",
+  "adhyaya": "9",
+  "title": "त्रिमर्मीया सिद्धिः"
+ },
+ "118": {
+  "sthana": "8",
+  "sthana_name": "Siddhisthāna",
+  "adhyaya": "10",
+  "title": "बस्तिसिद्धिः"
+ },
+ "119": {
+  "sthana": "8",
+  "sthana_name": "Siddhisthāna",
+  "adhyaya": "11",
+  "title": "फलमात्रासिद्धिः"
+ },
+ "120": {
+  "sthana": "8",
+  "sthana_name": "Siddhisthāna",
+  "adhyaya": "12",
+  "title": "उत्तरबस्तिसिद्धिः"
+ }
+}

@@ -1,0 +1,978 @@
+{
+  "_about": "Sanskrit <-> English <-> botanical lexicon for materia medica in the Charaka Samhita. 'sa' entries are case-SENSITIVE regexes over the NIIMH ITRANS-style romanization (A/I/U = long vowels, T/D/N/Sh = retroflex, sh = palatal, Ru = vocalic r, ~j = n-tilde, ~g = velar nasal). They match word stems as substrings because sandhi fuses words into compounds. 'en' entries are case-insensitive and anchored at a word start; they also carry common anglicized names (amla, giloy) so English queries and patents match. Ambiguous synonyms are deliberately left out (e.g. nAgara = ginger OR city, abhayA = haritaki OR 'fearless', tvak = cinnamon OR skin, kuShTha = Saussurea OR skin disease -> treated as the disease only).",
+  "entries": [
+    {
+      "id": "turmeric",
+      "name": "Turmeric",
+      "botanical": "Curcuma longa",
+      "sa": [
+        "(?<!dAru)haridr(?!Ameh)"
+      ],
+      "en": [
+        "turmeric",
+        "curcuma longa",
+        "curcumin",
+        "haridra",
+        "haldi"
+      ]
+    },
+    {
+      "id": "daruharidra",
+      "name": "Tree turmeric",
+      "botanical": "Berberis aristata",
+      "sa": [
+        "dAruharidr",
+        "dArvI"
+      ],
+      "en": [
+        "berberis aristata",
+        "daruharidra",
+        "tree turmeric",
+        "indian barberry",
+        "berberine"
+      ]
+    },
+    {
+      "id": "amalaki",
+      "name": "Amla",
+      "botanical": "Phyllanthus emblica",
+      "sa": [
+        "Amalak"
+      ],
+      "en": [
+        "amla",
+        "amalaki",
+        "emblica",
+        "phyllanthus emblica",
+        "indian gooseberry"
+      ]
+    },
+    {
+      "id": "haritaki",
+      "name": "Haritaki",
+      "botanical": "Terminalia chebula",
+      "sa": [
+        "harItak"
+      ],
+      "en": [
+        "haritaki",
+        "terminalia chebula",
+        "chebulic myrobalan"
+      ]
+    },
+    {
+      "id": "bibhitaki",
+      "name": "Bibhitaki",
+      "botanical": "Terminalia bellirica",
+      "sa": [
+        "bibhItak",
+        "vibhItak"
+      ],
+      "en": [
+        "bibhitaki",
+        "terminalia bellirica",
+        "terminalia bellerica"
+      ]
+    },
+    {
+      "id": "triphala",
+      "name": "Triphala (three-fruit formulation)",
+      "botanical": "T. chebula + T. bellirica + P. emblica",
+      "sa": [
+        "triphal"
+      ],
+      "en": [
+        "triphala"
+      ]
+    },
+    {
+      "id": "guduchi",
+      "name": "Guduchi / Giloy",
+      "botanical": "Tinospora cordifolia",
+      "sa": [
+        "guDUc",
+        "chinnaruh"
+      ],
+      "en": [
+        "guduchi",
+        "giloy",
+        "tinospora"
+      ]
+    },
+    {
+      "id": "neem",
+      "name": "Neem",
+      "botanical": "Azadirachta indica",
+      "sa": [
+        "nimb(?!U)"
+      ],
+      "en": [
+        "neem",
+        "azadirachta",
+        "nimba"
+      ]
+    },
+    {
+      "id": "long_pepper",
+      "name": "Long pepper",
+      "botanical": "Piper longum",
+      "sa": [
+        "pippal(?:I|y)"
+      ],
+      "en": [
+        "long pepper",
+        "piper longum",
+        "pippali"
+      ]
+    },
+    {
+      "id": "black_pepper",
+      "name": "Black pepper",
+      "botanical": "Piper nigrum",
+      "sa": [
+        "marica"
+      ],
+      "en": [
+        "black pepper",
+        "piper nigrum",
+        "piperine"
+      ]
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger",
+      "botanical": "Zingiber officinale",
+      "sa": [
+        "shuNTh",
+        "vishvabheShaj",
+        "Ardrak"
+      ],
+      "en": [
+        "ginger",
+        "zingiber",
+        "shunthi",
+        "gingerol"
+      ]
+    },
+    {
+      "id": "licorice",
+      "name": "Licorice",
+      "botanical": "Glycyrrhiza glabra",
+      "sa": [
+        "yaShTImadhu",
+        "yaShTyAhv",
+        "madhuk(?!ar|apuShp)"
+      ],
+      "en": [
+        "licorice",
+        "liquorice",
+        "glycyrrhiza",
+        "yashtimadhu",
+        "mulethi"
+      ]
+    },
+    {
+      "id": "ashwagandha",
+      "name": "Ashwagandha",
+      "botanical": "Withania somnifera",
+      "sa": [
+        "ashvagandh"
+      ],
+      "en": [
+        "ashwagandha",
+        "ashvagandha",
+        "withania"
+      ]
+    },
+    {
+      "id": "shatavari",
+      "name": "Shatavari",
+      "botanical": "Asparagus racemosus",
+      "sa": [
+        "shatAvar"
+      ],
+      "en": [
+        "shatavari",
+        "asparagus racemosus"
+      ]
+    },
+    {
+      "id": "brahmi",
+      "name": "Brahmi",
+      "botanical": "Bacopa monnieri",
+      "sa": [
+        "brAhmI"
+      ],
+      "en": [
+        "brahmi",
+        "bacopa"
+      ]
+    },
+    {
+      "id": "mandukaparni",
+      "name": "Gotu kola",
+      "botanical": "Centella asiatica",
+      "sa": [
+        "maNDUkaparN"
+      ],
+      "en": [
+        "centella",
+        "gotu kola",
+        "mandukaparni"
+      ]
+    },
+    {
+      "id": "vacha",
+      "name": "Sweet flag",
+      "botanical": "Acorus calamus",
+      "sa": [
+        "(?<![tA])(?<!ava)vacA(?!r)"
+      ],
+      "en": [
+        "acorus calamus",
+        "sweet flag",
+        "vacha"
+      ]
+    },
+    {
+      "id": "musta",
+      "name": "Nut grass",
+      "botanical": "Cyperus rotundus",
+      "sa": [
+        "must(?:A|a)"
+      ],
+      "en": [
+        "cyperus rotundus",
+        "nut grass",
+        "nutgrass",
+        "musta"
+      ]
+    },
+    {
+      "id": "sandalwood",
+      "name": "Sandalwood",
+      "botanical": "Santalum album",
+      "sa": [
+        "candan"
+      ],
+      "en": [
+        "sandalwood",
+        "santalum"
+      ]
+    },
+    {
+      "id": "vetiver",
+      "name": "Vetiver",
+      "botanical": "Chrysopogon zizanioides",
+      "sa": [
+        "ushIr"
+      ],
+      "en": [
+        "vetiver",
+        "vetiveria",
+        "chrysopogon zizanioides",
+        "khus"
+      ]
+    },
+    {
+      "id": "punarnava",
+      "name": "Punarnava",
+      "botanical": "Boerhavia diffusa",
+      "sa": [
+        "punarnav"
+      ],
+      "en": [
+        "punarnava",
+        "boerhavia",
+        "boerhaavia"
+      ]
+    },
+    {
+      "id": "gokshura",
+      "name": "Gokshura",
+      "botanical": "Tribulus terrestris",
+      "sa": [
+        "gokShur",
+        "shvadaMShTr"
+      ],
+      "en": [
+        "gokshura",
+        "tribulus"
+      ]
+    },
+    {
+      "id": "bilva",
+      "name": "Bael",
+      "botanical": "Aegle marmelos",
+      "sa": [
+        "bilv"
+      ],
+      "en": [
+        "bael",
+        "aegle marmelos",
+        "bilva"
+      ]
+    },
+    {
+      "id": "kutki",
+      "name": "Kutki",
+      "botanical": "Picrorhiza kurroa",
+      "sa": [
+        "kaTurohiN",
+        "tiktarohiN"
+      ],
+      "en": [
+        "picrorhiza",
+        "kutki",
+        "katuki"
+      ]
+    },
+    {
+      "id": "chitraka",
+      "name": "Chitraka",
+      "botanical": "Plumbago zeylanica",
+      "sa": [
+        "citrak"
+      ],
+      "en": [
+        "plumbago",
+        "chitraka",
+        "chitrak"
+      ]
+    },
+    {
+      "id": "vidanga",
+      "name": "Vidanga",
+      "botanical": "Embelia ribes",
+      "sa": [
+        "viDa~gg"
+      ],
+      "en": [
+        "embelia",
+        "vidanga",
+        "vidang"
+      ]
+    },
+    {
+      "id": "kutaja",
+      "name": "Kutaja",
+      "botanical": "Holarrhena pubescens",
+      "sa": [
+        "kuTaj",
+        "vatsak"
+      ],
+      "en": [
+        "holarrhena",
+        "kutaja",
+        "kurchi"
+      ]
+    },
+    {
+      "id": "arjuna",
+      "name": "Arjuna",
+      "botanical": "Terminalia arjuna",
+      "sa": [
+        "arjun"
+      ],
+      "en": [
+        "terminalia arjuna",
+        "arjuna"
+      ]
+    },
+    {
+      "id": "castor",
+      "name": "Castor",
+      "botanical": "Ricinus communis",
+      "sa": [
+        "eraND"
+      ],
+      "en": [
+        "castor",
+        "ricinus"
+      ]
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "botanical": "Allium sativum",
+      "sa": [
+        "lashun",
+        "rasona"
+      ],
+      "en": [
+        "garlic",
+        "allium sativum"
+      ]
+    },
+    {
+      "id": "onion",
+      "name": "Onion",
+      "botanical": "Allium cepa",
+      "sa": [
+        "palANDu"
+      ],
+      "en": [
+        "onion",
+        "allium cepa"
+      ]
+    },
+    {
+      "id": "guggulu",
+      "name": "Guggul",
+      "botanical": "Commiphora wightii",
+      "sa": [
+        "guggul"
+      ],
+      "en": [
+        "guggul",
+        "commiphora"
+      ]
+    },
+    {
+      "id": "tulsi",
+      "name": "Holy basil",
+      "botanical": "Ocimum tenuiflorum",
+      "sa": [
+        "surasA"
+      ],
+      "en": [
+        "tulsi",
+        "tulasi",
+        "holy basil",
+        "ocimum sanctum",
+        "ocimum tenuiflorum"
+      ]
+    },
+    {
+      "id": "khadira",
+      "name": "Catechu",
+      "botanical": "Senegalia catechu",
+      "sa": [
+        "khadir"
+      ],
+      "en": [
+        "acacia catechu",
+        "senegalia catechu",
+        "khadira",
+        "catechu"
+      ]
+    },
+    {
+      "id": "pomegranate",
+      "name": "Pomegranate",
+      "botanical": "Punica granatum",
+      "sa": [
+        "dADim"
+      ],
+      "en": [
+        "pomegranate",
+        "punica granatum"
+      ]
+    },
+    {
+      "id": "jamun",
+      "name": "Jamun",
+      "botanical": "Syzygium cumini",
+      "sa": [
+        "jambU"
+      ],
+      "en": [
+        "jamun",
+        "syzygium cumini",
+        "eugenia jambolana"
+      ]
+    },
+    {
+      "id": "udumbara",
+      "name": "Cluster fig",
+      "botanical": "Ficus racemosa",
+      "sa": [
+        "(?<!a)udumbar"
+      ],
+      "en": [
+        "ficus racemosa",
+        "ficus glomerata",
+        "udumbara",
+        "cluster fig"
+      ]
+    },
+    {
+      "id": "ashvattha",
+      "name": "Sacred fig",
+      "botanical": "Ficus religiosa",
+      "sa": [
+        "ashvatth"
+      ],
+      "en": [
+        "ficus religiosa",
+        "peepal",
+        "pipal"
+      ]
+    },
+    {
+      "id": "apamarga",
+      "name": "Apamarga",
+      "botanical": "Achyranthes aspera",
+      "sa": [
+        "apAmArg"
+      ],
+      "en": [
+        "achyranthes",
+        "apamarga"
+      ]
+    },
+    {
+      "id": "bhallataka",
+      "name": "Marking nut",
+      "botanical": "Semecarpus anacardium",
+      "sa": [
+        "bhallAtak"
+      ],
+      "en": [
+        "semecarpus",
+        "bhallataka",
+        "marking nut"
+      ]
+    },
+    {
+      "id": "devadaru",
+      "name": "Deodar",
+      "botanical": "Cedrus deodara",
+      "sa": [
+        "devadAr"
+      ],
+      "en": [
+        "cedrus deodara",
+        "deodar",
+        "devadaru"
+      ]
+    },
+    {
+      "id": "kantakari",
+      "name": "Kantakari",
+      "botanical": "Solanum virginianum",
+      "sa": [
+        "kaNTakAr",
+        "nidigdhik"
+      ],
+      "en": [
+        "solanum xanthocarpum",
+        "solanum virginianum",
+        "kantakari"
+      ]
+    },
+    {
+      "id": "coriander",
+      "name": "Coriander",
+      "botanical": "Coriandrum sativum",
+      "sa": [
+        "dhAnyak"
+      ],
+      "en": [
+        "coriander",
+        "coriandrum"
+      ]
+    },
+    {
+      "id": "cumin",
+      "name": "Cumin",
+      "botanical": "Cuminum cyminum",
+      "sa": [
+        "jIrak"
+      ],
+      "en": [
+        "cumin",
+        "cuminum"
+      ]
+    },
+    {
+      "id": "asafoetida",
+      "name": "Asafoetida",
+      "botanical": "Ferula assa-foetida",
+      "sa": [
+        "hi~ggu"
+      ],
+      "en": [
+        "asafoetida",
+        "asafetida",
+        "ferula"
+      ]
+    },
+    {
+      "id": "ajwain",
+      "name": "Ajwain",
+      "botanical": "Trachyspermum ammi",
+      "sa": [
+        "yavAnI",
+        "yavAnik"
+      ],
+      "en": [
+        "ajwain",
+        "carum copticum",
+        "trachyspermum"
+      ]
+    },
+    {
+      "id": "rasna",
+      "name": "Rasna",
+      "botanical": "Pluchea lanceolata",
+      "sa": [
+        "rAsn"
+      ],
+      "en": [
+        "rasna",
+        "pluchea"
+      ]
+    },
+    {
+      "id": "vasa",
+      "name": "Malabar nut",
+      "botanical": "Justicia adhatoda",
+      "sa": [
+        "aTarUSh",
+        "vAsak"
+      ],
+      "en": [
+        "adhatoda",
+        "vasaka",
+        "malabar nut"
+      ]
+    },
+    {
+      "id": "manjistha",
+      "name": "Indian madder",
+      "botanical": "Rubia cordifolia",
+      "sa": [
+        "ma~jjiShTh(?!Ameh)"
+      ],
+      "en": [
+        "manjistha",
+        "manjishtha",
+        "rubia cordifolia",
+        "indian madder"
+      ]
+    },
+    {
+      "id": "sariva",
+      "name": "Indian sarsaparilla",
+      "botanical": "Hemidesmus indicus",
+      "sa": [
+        "sAriv",
+        "anantamUl"
+      ],
+      "en": [
+        "hemidesmus",
+        "sariva",
+        "indian sarsaparilla"
+      ]
+    },
+    {
+      "id": "chirata",
+      "name": "Chirata",
+      "botanical": "Swertia chirata",
+      "sa": [
+        "kirAtatikt",
+        "bhUnimb"
+      ],
+      "en": [
+        "swertia",
+        "chirata",
+        "chirayita"
+      ]
+    },
+    {
+      "id": "bhringaraja",
+      "name": "Bhringraj",
+      "botanical": "Eclipta prostrata",
+      "sa": [
+        "bhRu~ggarAj"
+      ],
+      "en": [
+        "eclipta",
+        "bhringraj",
+        "bhringaraj"
+      ]
+    },
+    {
+      "id": "durva",
+      "name": "Durva grass",
+      "botanical": "Cynodon dactylon",
+      "sa": [
+        "dUrv"
+      ],
+      "en": [
+        "cynodon",
+        "durva",
+        "bermuda grass"
+      ]
+    },
+    {
+      "id": "grape",
+      "name": "Grape / raisin",
+      "botanical": "Vitis vinifera",
+      "sa": [
+        "drAkSh",
+        "mRudvIk"
+      ],
+      "en": [
+        "grape",
+        "vitis vinifera",
+        "raisin"
+      ]
+    },
+    {
+      "id": "date_palm",
+      "name": "Date palm",
+      "botanical": "Phoenix dactylifera",
+      "sa": [
+        "kharjUr"
+      ],
+      "en": [
+        "date palm",
+        "phoenix dactylifera",
+        "date fruit"
+      ]
+    },
+    {
+      "id": "camphor",
+      "name": "Camphor",
+      "botanical": "Cinnamomum camphora",
+      "sa": [
+        "karpUr"
+      ],
+      "en": [
+        "camphor",
+        "cinnamomum camphora"
+      ]
+    },
+    {
+      "id": "saffron",
+      "name": "Saffron",
+      "botanical": "Crocus sativus",
+      "sa": [
+        "ku~gkum"
+      ],
+      "en": [
+        "saffron",
+        "crocus sativus"
+      ]
+    },
+    {
+      "id": "sesame",
+      "name": "Sesame",
+      "botanical": "Sesamum indicum",
+      "sa": [
+        "tilatail",
+        "tilakalk",
+        "tilAn(?![a-zA-Z])",
+        "tilaiH"
+      ],
+      "en": [
+        "sesame",
+        "sesamum"
+      ]
+    },
+    {
+      "id": "mustard",
+      "name": "Mustard",
+      "botanical": "Brassica juncea",
+      "sa": [
+        "sarShap"
+      ],
+      "en": [
+        "mustard",
+        "brassica juncea"
+      ]
+    },
+    {
+      "id": "fenugreek",
+      "name": "Fenugreek",
+      "botanical": "Trigonella foenum-graecum",
+      "sa": [
+        "methik"
+      ],
+      "en": [
+        "fenugreek",
+        "trigonella"
+      ]
+    },
+    {
+      "id": "water_lily",
+      "name": "Water lily / lotus",
+      "botanical": "Nymphaea / Nelumbo spp.",
+      "sa": [
+        "utpal"
+      ],
+      "en": [
+        "nymphaea",
+        "water lily",
+        "lotus",
+        "nelumbo"
+      ]
+    },
+    {
+      "id": "nutmeg",
+      "name": "Nutmeg",
+      "botanical": "Myristica fragrans",
+      "sa": [
+        "jAtIphal"
+      ],
+      "en": [
+        "nutmeg",
+        "myristica"
+      ]
+    },
+    {
+      "id": "clove",
+      "name": "Clove",
+      "botanical": "Syzygium aromaticum",
+      "sa": [
+        "lava~gg"
+      ],
+      "en": [
+        "clove",
+        "syzygium aromaticum",
+        "eugenol"
+      ]
+    },
+    {
+      "id": "patola",
+      "name": "Pointed gourd",
+      "botanical": "Trichosanthes dioica",
+      "sa": [
+        "paTol"
+      ],
+      "en": [
+        "trichosanthes",
+        "patola",
+        "pointed gourd"
+      ]
+    },
+    {
+      "id": "nirgundi",
+      "name": "Nirgundi",
+      "botanical": "Vitex negundo",
+      "sa": [
+        "nirguND",
+        "sinduvAr"
+      ],
+      "en": [
+        "vitex negundo",
+        "nirgundi"
+      ]
+    },
+    {
+      "id": "bala",
+      "name": "Bala",
+      "botanical": "Sida cordifolia",
+      "sa": [
+        "(?<![rU])balA(?:mUl|tail|kv|kalk|ghRut|ti)"
+      ],
+      "en": [
+        "sida cordifolia"
+      ]
+    },
+    {
+      "id": "kapikacchu",
+      "name": "Velvet bean",
+      "botanical": "Mucuna pruriens",
+      "sa": [
+        "kapikacch",
+        "AtmaguptA"
+      ],
+      "en": [
+        "mucuna",
+        "kapikacchu",
+        "velvet bean"
+      ]
+    },
+    {
+      "id": "vidari",
+      "name": "Vidari",
+      "botanical": "Pueraria tuberosa",
+      "sa": [
+        "vidArI"
+      ],
+      "en": [
+        "pueraria tuberosa",
+        "vidari"
+      ]
+    },
+    {
+      "id": "pashanabheda",
+      "name": "Pashanabheda",
+      "botanical": "Bergenia ciliata",
+      "sa": [
+        "pAShANabhed"
+      ],
+      "en": [
+        "bergenia",
+        "pashanabheda"
+      ]
+    },
+    {
+      "id": "shirisha",
+      "name": "Shirisha",
+      "botanical": "Albizia lebbeck",
+      "sa": [
+        "shirISh"
+      ],
+      "en": [
+        "albizia lebbeck",
+        "albizzia lebbeck",
+        "shirisha"
+      ]
+    },
+    {
+      "id": "karanja",
+      "name": "Karanja",
+      "botanical": "Pongamia pinnata",
+      "sa": [
+        "kara~jj"
+      ],
+      "en": [
+        "pongamia",
+        "karanja"
+      ]
+    },
+    {
+      "id": "lodhra",
+      "name": "Lodhra",
+      "botanical": "Symplocos racemosa",
+      "sa": [
+        "lodhr"
+      ],
+      "en": [
+        "symplocos",
+        "lodhra"
+      ]
+    },
+    {
+      "id": "shilajit",
+      "name": "Shilajit (mineral pitch)",
+      "botanical": "(mineral exudate)",
+      "sa": [
+        "shilAjat",
+        "shilAhv"
+      ],
+      "en": [
+        "shilajit",
+        "shilajatu",
+        "mineral pitch"
+      ]
+    },
+    {
+      "id": "aloe",
+      "name": "Aloe",
+      "botanical": "Aloe vera",
+      "sa": [
+        "ghRutakumAr"
+      ],
+      "en": [
+        "aloe vera",
+        "aloe barbadensis",
+        "ghritakumari"
+      ]
+    }
+  ]
+}
