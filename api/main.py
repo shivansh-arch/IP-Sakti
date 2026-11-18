@@ -9,6 +9,11 @@ Then: POST http://localhost:8000/query  with JSON body {"query": "..."}
 Or browse http://localhost:8000/docs for interactive Swagger UI.
 """
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -23,9 +28,14 @@ NIIMH_THRESHOLD = 0.3  # reverted — lowering to 0.25 let noise through (generi
                        # by decoupling NIIMH/patent search (below) than by threshold tuning.
 TOP_K = 5
 
+# Qdrant Cloud sets these via env vars; local Docker falls back to localhost.
+QDRANT_URL = os.environ.get("QDRANT_URL")  # e.g. https://xyz.cloud.qdrant.io
+QDRANT_API_KEY = os.environ.get("QDRANT_API_KEY")  # only needed for Qdrant Cloud
+
 app = FastAPI(title="IP-SAKTI API (v1)")
 
-# Open CORS for local dev — tighten this before any real deployment
+# Open CORS for local dev / demo — tighten this (allow specific origin only)
+# before any real production deployment.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -35,7 +45,10 @@ app.add_middleware(
 
 # Load once at startup, not per-request
 model = SentenceTransformer(MODEL_NAME)
-client = QdrantClient(host="localhost", port=6333, check_compatibility=False)
+if QDRANT_URL:
+    client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY, check_compatibility=False)
+else:
+    client = QdrantClient(host="localhost", port=6333, check_compatibility=False)
 
 
 class QueryRequest(BaseModel):
