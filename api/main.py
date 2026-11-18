@@ -104,7 +104,7 @@ def query(request: QueryRequest):
 
     if ENGINE == "v1":
         n = search.search_niimh_v1(q, k=TOP_K)
-        model = search.get_model(search.V1_MODEL)
+        model = search.get_model(search.V1_MODEL)  # needs sentence-transformers (dev install)
         pts = search.get_client().query_points(search.V1_PATENTS, query=model.encode(q).tolist(),
                                                limit=3, with_payload=True).points
         patents = [{"score": p.score, "publication_number": p.payload.get("publication_number"),

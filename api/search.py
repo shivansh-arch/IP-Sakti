@@ -71,12 +71,33 @@ def get_client() -> QdrantClient:
 
 @lru_cache(maxsize=2)
 def get_model(name: str):
+    """sentence-transformers model (PyTorch). Only the v1 baseline and offline
+    tooling use this; the served v2 path uses ONNX via embed_v2()."""
     from sentence_transformers import SentenceTransformer  # heavy import, keep lazy
     return SentenceTransformer(name)
 
 
+@lru_cache(maxsize=1)
+def _v2_embedder():
+    # ONNX build of the same bge-small model (Qdrant/bge-small-en-v1.5-onnx-Q).
+    # Measured against sentence-transformers on 53 texts: cosine 1.0000, so
+    # vectors indexed with either are interchangeable. ~10x lighter than
+    # PyTorch, which is what lets the API fit a 512 MB free-tier container.
+    from fastembed import TextEmbedding
+    return TextEmbedding(V2_MODEL, cache_dir=os.environ.get("FASTEMBED_CACHE_PATH"))
+
+
+def embed_v2(texts: list[str]) -> list[list[float]]:
+    """L2-normalised bge-small embeddings for v2 (queries carry V2_QUERY_PREFIX)."""
+    out = []
+    for v in _v2_embedder().embed(texts):
+        n = float((v ** 2).sum()) ** 0.5 or 1.0
+        out.append((v / n).tolist())
+    return out
+
+
 def encode_query_v2(text: str) -> list[float]:
-    return get_model(V2_MODEL).encode(V2_QUERY_PREFIX + text, normalize_embeddings=True).tolist()
+    return embed_v2([V2_QUERY_PREFIX + text])[0]
 
 
 def _doc_tags(payload: dict) -> Tags:
@@ -143,8 +164,7 @@ def niimh_evidence_for_patent(payload: dict, k: int = 1) -> list[dict]:
     ptags = _doc_tags(payload)
     if ptags.empty:
         return []
-    vec = get_model(V2_MODEL).encode(V2_QUERY_PREFIX + payload.get("text", ""),
-                                     normalize_embeddings=True).tolist()
+    vec = encode_query_v2(payload.get("text", ""))
     return hybrid_search(V2_NIIMH, vec, ptags, k)
 
 
