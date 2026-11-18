@@ -27,26 +27,31 @@ def normalize(text: str) -> str:
     return WHITESPACE_RE.sub(" ", text.strip()).lower()
 
 
-groups = defaultdict(list)
+def main():
+    groups = defaultdict(list)
 
-with open(IN_FILE, encoding="utf-8") as f:
-    for line in f:
-        c = json.loads(line)
-        key = normalize(c["text"])
-        groups[key].append(c)
+    with open(IN_FILE, encoding="utf-8") as f:
+        for line in f:
+            c = json.loads(line)
+            key = normalize(c["text"])
+            groups[key].append(c)
 
-kept = 0
-dropped = 0
+    kept = 0
+    dropped = 0
 
-with open(OUT_FILE, "w", encoding="utf-8") as out:
-    for key, entries in groups.items():
-        # prefer fewest flags (cleanest extraction), then lowest doc_id as tiebreak
-        entries.sort(key=lambda c: (len(c.get("flags") or []), c["doc_id"]))
-        canonical = entries[0]
-        out.write(json.dumps(canonical, ensure_ascii=False) + "\n")
-        kept += 1
-        dropped += len(entries) - 1
+    with open(OUT_FILE, "w", encoding="utf-8") as out:
+        for key, entries in groups.items():
+            # prefer fewest flags (cleanest extraction), then lowest doc_id as tiebreak
+            entries.sort(key=lambda c: (len(c.get("flags") or []), c["doc_id"]))
+            canonical = entries[0]
+            out.write(json.dumps(canonical, ensure_ascii=False) + "\n")
+            kept += 1
+            dropped += len(entries) - 1
 
-print(f"Kept: {kept}")
-print(f"Dropped as duplicates: {dropped}")
-print(f"Dedup rate: {dropped / (kept + dropped) * 100:.1f}%")
+    print(f"Kept: {kept}")
+    print(f"Dropped as duplicates: {dropped}")
+    print(f"Dedup rate: {dropped / (kept + dropped) * 100:.1f}%")
+
+
+if __name__ == "__main__":
+    main()
