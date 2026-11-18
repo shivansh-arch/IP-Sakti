@@ -961,6 +961,19 @@
         "shilajatu",
         "mineral pitch"
       ]
+    },
+    {
+      "id": "aloe",
+      "name": "Aloe",
+      "botanical": "Aloe vera",
+      "sa": [
+        "ghRutakumAr"
+      ],
+      "en": [
+        "aloe vera",
+        "aloe barbadensis",
+        "ghritakumari"
+      ]
     }
   ]
 }
