@@ -1,0 +1,19 @@
+# Render Blueprint — one-click deploy of the IP-SAKTI API + frontend.
+# https://dashboard.render.com/blueprint/new?repo=https://github.com/shivansh-arch/IP-Sakti
+services:
+  - type: web
+    name: ip-sakti
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      # Entered by you in the Render dashboard when the Blueprint is created;
+      # never stored in this repository.
+      - key: QDRANT_URL
+        sync: false
+      - key: QDRANT_API_KEY
+        sync: false
+      - key: RETRIEVAL_ENGINE
+        value: v2
