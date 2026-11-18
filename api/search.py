@@ -52,9 +52,10 @@ V2_NIIMH = "ip_sakti_niimh_v2"
 V2_PATENTS = "ip_sakti_patents_v2"
 W_DENSE, W_ENTITY = 0.5, 0.5
 CANDIDATES = 50
-# Calibrated by eval/run_eval.py --calibrate (see eval/README in notes/architecture.md).
-V2_NIIMH_THRESHOLD = float(os.environ.get("V2_NIIMH_THRESHOLD", 0.55))
-V2_PATENT_THRESHOLD = float(os.environ.get("V2_PATENT_THRESHOLD", 0.55))
+# NIIMH threshold calibrated on the eval DEV split (eval/run_eval.py --calibrate -> 0.59).
+# Patent threshold reuses it (only 82 patents, too few to calibrate separately).
+V2_NIIMH_THRESHOLD = float(os.environ.get("V2_NIIMH_THRESHOLD", 0.59))
+V2_PATENT_THRESHOLD = float(os.environ.get("V2_PATENT_THRESHOLD", 0.59))
 
 
 @lru_cache(maxsize=1)
