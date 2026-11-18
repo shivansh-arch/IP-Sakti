@@ -1,0 +1,575 @@
+{
+  "_about": "Disease / indication lexicon mapping Charaka Samhita (ITRANS romanization) terms to modern English terms used in patents. Same matching rules as plants.json. Lookbehinds exclude common false friends: darshana/sparsha (seeing/touch) for arshas, prakAsha for kAsa, vishvAsa (trust) for shvAsa, viShaya/viShama (object/uneven) for viSha.",
+  "entries": [
+    {
+      "id": "fever",
+      "name": "Fever",
+      "sa": [
+        "jvar"
+      ],
+      "en": [
+        "fever",
+        "pyrexia",
+        "febrile",
+        "antipyretic",
+        "malaria"
+      ]
+    },
+    {
+      "id": "diabetes",
+      "name": "Diabetes / urinary disorders (prameha)",
+      "sa": [
+        "prameh",
+        "madhumeh"
+      ],
+      "en": [
+        "diabet",
+        "hyperglyc",
+        "blood sugar",
+        "blood glucose",
+        "glycemic",
+        "insulin resistance",
+        "antidiabetic",
+        "prameha",
+        "madhumeha"
+      ]
+    },
+    {
+      "id": "skin_disease",
+      "name": "Skin disease (kushtha)",
+      "sa": [
+        "kuShTh",
+        "kilAs",
+        "sidhm",
+        "vicarcik"
+      ],
+      "en": [
+        "skin disease",
+        "skin disorder",
+        "dermat",
+        "psoriasis",
+        "eczema",
+        "leprosy",
+        "vitiligo",
+        "leucoderma",
+        "acne",
+        "kushtha"
+      ]
+    },
+    {
+      "id": "hemorrhoids",
+      "name": "Hemorrhoids (arshas)",
+      "sa": [
+        "(?<![dpA])arsh(?:as|AMs|o|aH|A|ash)",
+        "gudA~gkur"
+      ],
+      "en": [
+        "hemorrhoid",
+        "haemorrhoid",
+        "piles",
+        "arsha"
+      ]
+    },
+    {
+      "id": "cough",
+      "name": "Cough (kasa)",
+      "sa": [
+        "(?<!pra)(?<!ava)kAs(?![hTI])"
+      ],
+      "en": [
+        "cough",
+        "antitussive",
+        "bronchitis"
+      ]
+    },
+    {
+      "id": "asthma",
+      "name": "Dyspnea / asthma (shvasa)",
+      "sa": [
+        "(?<!vi)shvAs"
+      ],
+      "en": [
+        "asthma",
+        "dyspnea",
+        "dyspnoea",
+        "breathless",
+        "respiratory"
+      ]
+    },
+    {
+      "id": "anemia",
+      "name": "Anemia (pandu)",
+      "sa": [
+        "pANDu"
+      ],
+      "en": [
+        "anemi",
+        "anaemi",
+        "hemoglobin",
+        "haemoglobin"
+      ]
+    },
+    {
+      "id": "wound",
+      "name": "Wounds / ulcers (vrana)",
+      "sa": [
+        "vraN"
+      ],
+      "en": [
+        "wound",
+        "ulcer",
+        "burn"
+      ]
+    },
+    {
+      "id": "inflammation",
+      "name": "Swelling / inflammation (shotha)",
+      "sa": [
+        "shoth",
+        "shvayath"
+      ],
+      "en": [
+        "edema",
+        "oedema",
+        "swelling",
+        "inflammat",
+        "anti-inflammatory",
+        "antiinflammatory"
+      ]
+    },
+    {
+      "id": "abdominal_mass",
+      "name": "Abdominal mass (gulma)",
+      "sa": [
+        "gulm"
+      ],
+      "en": [
+        "abdominal mass",
+        "abdominal tumo",
+        "gulma"
+      ]
+    },
+    {
+      "id": "mental_disorder",
+      "name": "Mental disorders (unmada)",
+      "sa": [
+        "unmAd",
+        "manovikAr"
+      ],
+      "en": [
+        "psychosis",
+        "mental disorder",
+        "insanity",
+        "schizophren",
+        "depression",
+        "anxiety"
+      ]
+    },
+    {
+      "id": "epilepsy",
+      "name": "Epilepsy (apasmara)",
+      "sa": [
+        "apasmAr"
+      ],
+      "en": [
+        "epilep",
+        "seizure",
+        "convulsion"
+      ]
+    },
+    {
+      "id": "cognition",
+      "name": "Memory / cognition (medhya)",
+      "sa": [
+        "medhy"
+      ],
+      "en": [
+        "memory",
+        "cognit",
+        "nootropic",
+        "alzheimer",
+        "dementia"
+      ]
+    },
+    {
+      "id": "hiccup",
+      "name": "Hiccup (hikka)",
+      "sa": [
+        "hikk"
+      ],
+      "en": [
+        "hiccup"
+      ]
+    },
+    {
+      "id": "vomiting",
+      "name": "Vomiting (chardi)",
+      "sa": [
+        "chard"
+      ],
+      "en": [
+        "vomit",
+        "emesis",
+        "nausea",
+        "antiemetic"
+      ]
+    },
+    {
+      "id": "erysipelas",
+      "name": "Spreading skin infection (visarpa)",
+      "sa": [
+        "visarp"
+      ],
+      "en": [
+        "erysipelas",
+        "herpes",
+        "cellulitis"
+      ]
+    },
+    {
+      "id": "bleeding",
+      "name": "Bleeding disorders (raktapitta)",
+      "sa": [
+        "raktapitt"
+      ],
+      "en": [
+        "bleeding",
+        "hemorrhag",
+        "haemorrhag",
+        "epistaxis"
+      ]
+    },
+    {
+      "id": "gout",
+      "name": "Gout (vatarakta)",
+      "sa": [
+        "vAtarakt"
+      ],
+      "en": [
+        "gout",
+        "hyperuricemi",
+        "uric acid"
+      ]
+    },
+    {
+      "id": "arthritis",
+      "name": "Arthritis / joint disorders",
+      "sa": [
+        "sandhivAt",
+        "Urustambh",
+        "AmavAt"
+      ],
+      "en": [
+        "arthrit",
+        "rheumat",
+        "joint pain",
+        "osteoarthr"
+      ]
+    },
+    {
+      "id": "tuberculosis",
+      "name": "Consumption / wasting (yakshma)",
+      "sa": [
+        "yakShm"
+      ],
+      "en": [
+        "tubercul",
+        "consumption",
+        "wasting"
+      ]
+    },
+    {
+      "id": "pain",
+      "name": "Pain / colic (shula)",
+      "sa": [
+        "shUl"
+      ],
+      "en": [
+        "pain",
+        "analges",
+        "colic"
+      ]
+    },
+    {
+      "id": "urinary",
+      "name": "Urinary disorders (mutrakricchra)",
+      "sa": [
+        "mUtrakRucchr",
+        "mUtrAghAt"
+      ],
+      "en": [
+        "urinary",
+        "dysuria",
+        "urine retention"
+      ]
+    },
+    {
+      "id": "urolithiasis",
+      "name": "Urinary stones (ashmari)",
+      "sa": [
+        "ashmar"
+      ],
+      "en": [
+        "kidney stone",
+        "urolith",
+        "calculi",
+        "nephrolith",
+        "renal calcul"
+      ]
+    },
+    {
+      "id": "worms",
+      "name": "Worms / parasites (krimi)",
+      "sa": [
+        "krimi",
+        "kRumi"
+      ],
+      "en": [
+        "worm",
+        "helminth",
+        "anthelmint",
+        "parasit"
+      ]
+    },
+    {
+      "id": "diarrhea",
+      "name": "Diarrhea / malabsorption (atisara, grahani)",
+      "sa": [
+        "atIsAr",
+        "atisAr",
+        "grahaNI",
+        "pravAhik"
+      ],
+      "en": [
+        "diarrh",
+        "dysentery",
+        "irritable bowel",
+        "colitis",
+        "malabsorption"
+      ]
+    },
+    {
+      "id": "poisoning",
+      "name": "Poisoning / toxicity (visha)",
+      "sa": [
+        "viSh(?!ay|am|Ad|Nu|aN|aNN|ANN)",
+        "garaviSh"
+      ],
+      "en": [
+        "poison",
+        "toxicity",
+        "venom",
+        "snake bite",
+        "snakebite",
+        "detoxif"
+      ]
+    },
+    {
+      "id": "alcoholism",
+      "name": "Alcoholism (madatyaya)",
+      "sa": [
+        "madAtyay",
+        "pAnAtyay"
+      ],
+      "en": [
+        "alcohol",
+        "hangover",
+        "intoxication"
+      ]
+    },
+    {
+      "id": "sexual_health",
+      "name": "Virility / fertility (vajikarana, klaibya)",
+      "sa": [
+        "klaiby",
+        "vAjIkar",
+        "vRuShy",
+        "shukrakShay"
+      ],
+      "en": [
+        "aphrodisiac",
+        "erectile",
+        "impotence",
+        "libido",
+        "sexual",
+        "infertil",
+        "sperm",
+        "virility"
+      ]
+    },
+    {
+      "id": "rejuvenation",
+      "name": "Rejuvenation / immunity (rasayana)",
+      "sa": [
+        "rasAyan"
+      ],
+      "en": [
+        "rejuvenat",
+        "anti-aging",
+        "antiaging",
+        "anti-ageing",
+        "longevity",
+        "immun",
+        "adaptogen",
+        "antioxidant",
+        "rasayana"
+      ]
+    },
+    {
+      "id": "digestion",
+      "name": "Digestive disorders (agnimandya, arocaka)",
+      "sa": [
+        "arocak",
+        "agnimAndy",
+        "ajIrN",
+        "mandAgn",
+        "vibandh",
+        "AnAh"
+      ],
+      "en": [
+        "indigestion",
+        "dyspepsia",
+        "appetite",
+        "digestive",
+        "digestion",
+        "constipation",
+        "flatulence",
+        "bloating",
+        "laxative"
+      ]
+    },
+    {
+      "id": "heart",
+      "name": "Heart disease (hridroga)",
+      "sa": [
+        "hRudrog",
+        "hRudy"
+      ],
+      "en": [
+        "cardi",
+        "heart",
+        "hypertens",
+        "blood pressure",
+        "cholesterol",
+        "hyperlipid",
+        "dyslipid"
+      ]
+    },
+    {
+      "id": "headache",
+      "name": "Head disorders (shiroroga)",
+      "sa": [
+        "shiroro",
+        "ardhAvabhedak"
+      ],
+      "en": [
+        "headache",
+        "migraine"
+      ]
+    },
+    {
+      "id": "eye",
+      "name": "Eye disorders",
+      "sa": [
+        "akShiro",
+        "netraro",
+        "netry",
+        "cakShuShy",
+        "timir",
+        "abhiShyand"
+      ],
+      "en": [
+        "ophthalm",
+        "cataract",
+        "conjunctivitis",
+        "eye disease",
+        "eye disorder",
+        "vision"
+      ]
+    },
+    {
+      "id": "gynecological",
+      "name": "Gynecological disorders (pradara, yonivyapad)",
+      "sa": [
+        "pradar",
+        "yonivyAp",
+        "yoniro",
+        "stanyadoSh"
+      ],
+      "en": [
+        "leucorrh",
+        "leukorrh",
+        "menorrh",
+        "menstrua",
+        "gynec",
+        "gynaec",
+        "uterine",
+        "vaginal",
+        "lactation",
+        "dysmenorr",
+        "polycystic"
+      ]
+    },
+    {
+      "id": "liver",
+      "name": "Jaundice / liver & spleen (kamala)",
+      "sa": [
+        "kAmal",
+        "halImak",
+        "yakRut",
+        "plIh"
+      ],
+      "en": [
+        "jaundice",
+        "hepat",
+        "liver",
+        "spleen"
+      ]
+    },
+    {
+      "id": "obesity",
+      "name": "Obesity (sthaulya)",
+      "sa": [
+        "sthaulya",
+        "medoro",
+        "atisthUl"
+      ],
+      "en": [
+        "obes",
+        "weight loss",
+        "overweight",
+        "adipos"
+      ]
+    },
+    {
+      "id": "cancer",
+      "name": "Tumors (arbuda, granthi)",
+      "sa": [
+        "arbud"
+      ],
+      "en": [
+        "cancer",
+        "tumor",
+        "tumour",
+        "carcinoma",
+        "neoplas",
+        "oncolog",
+        "antitumor",
+        "anticancer"
+      ]
+    },
+    {
+      "id": "ascites",
+      "name": "Ascites / abdominal enlargement (udara)",
+      "sa": [
+        "jalodar",
+        "udarAN",
+        "udararog",
+        "mahodar"
+      ],
+      "en": [
+        "ascites"
+      ]
+    }
+  ]
+}
