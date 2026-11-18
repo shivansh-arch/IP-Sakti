@@ -8,3 +8,5 @@ __pycache__/
 .ipynb_checkpoints/
 node_modules/
 .next/
+qdrant_local/
+.pytest_cache/
