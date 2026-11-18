@@ -352,15 +352,15 @@
       "id": "poisoning",
       "name": "Poisoning / toxicity (visha)",
       "sa": [
-        "viSh(?!ay|am|Ad|Nu|aN|aNN|ANN)",
+        "(?<![aAn])viSh(?!y|T|kRu|am|ay|Ad|Nu|aN|ANN)",
         "garaviSh"
       ],
       "en": [
-        "poison",
-        "toxicity",
+        "poisoning",
         "venom",
         "snake bite",
         "snakebite",
+        "antidote",
         "detoxif"
       ]
     },
