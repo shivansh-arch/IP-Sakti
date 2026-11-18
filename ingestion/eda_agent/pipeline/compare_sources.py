@@ -10,8 +10,12 @@ for patent-vs-NIIMH pairs specifically, since this is a different
 embedding pairing than the query-vs-corpus calibration done earlier.
 """
 
+import os
 from sentence_transformers import SentenceTransformer
 from qdrant_client import QdrantClient
+
+QDRANT_URL = os.environ.get("QDRANT_URL")
+QDRANT_API_KEY = os.environ.get("QDRANT_API_KEY")
 
 NIIMH_COLLECTION = "ip_sakti_niimh"
 PATENTS_COLLECTION = "ip_sakti_patents"
@@ -20,7 +24,10 @@ MODEL_NAME = "paraphrase-multilingual-MiniLM-L12-v2"
 
 def main():
     model = SentenceTransformer(MODEL_NAME)
-    client = QdrantClient(host="localhost", port=6333, check_compatibility=False)
+    if QDRANT_URL:
+        client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY, check_compatibility=False)
+    else:
+        client = QdrantClient(host="localhost", port=6333, check_compatibility=False)
 
     # Pull all patents back out (with their stored text) via scroll
     patents = []
