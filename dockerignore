@@ -1,0 +1,15 @@
+.venv/
+data/
+pg_data/
+qdrant_data/
+scratch/
+notebooks/
+tests/
+eval/
+runtime/
+frontend/
+.git/
+.gitignore
+__pycache__/
+*.pyc
+.env
