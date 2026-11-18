@@ -22,9 +22,12 @@ WHITESPACE_RE = re.compile(r"\s+")
 
 
 def normalize(text: str) -> str:
-    """Collapse whitespace and lowercase for comparison only —
-    the ORIGINAL text (not this normalized form) is what gets kept."""
-    return WHITESPACE_RE.sub(" ", text.strip()).lower()
+    """Collapse whitespace for comparison only — the ORIGINAL text is what
+    gets kept. Deliberately NOT lowercased: in this ITRANS-style scheme case
+    is phonemic (kAla != kala, T != t), so lowercasing could merge two
+    different verses. (Measured on the current corpus: 0 such collisions,
+    so outputs are unchanged — this guards future scrapes.)"""
+    return WHITESPACE_RE.sub(" ", text.strip())
 
 
 def main():
